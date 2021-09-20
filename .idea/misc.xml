@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.springframework.beans.factory.annotation.Autowired" />
+    </list>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/day09" />
+    <file type="web" url="file://$PROJECT_DIR$/day10" />
+    <file type="web" url="file://$PROJECT_DIR$/day11" />
+    <file type="web" url="file://$PROJECT_DIR$/day12" />
+    <file type="web" url="file://$PROJECT_DIR$/day13" />
+    <file type="web" url="file://$PROJECT_DIR$/day13_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/day13_ssm_1" />
+    <file type="web" url="file://$PROJECT_DIR$/mybatis_1" />
+    <file type="web" url="file://$PROJECT_DIR$/mybatis_2" />
+    <file type="web" url="file://$PROJECT_DIR$/progect01" />
+    <file type="web" url="file://$PROJECT_DIR$/test" />
+    <file type="web" url="file://$PROJECT_DIR$/test_crud" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/day10/pom.xml" />
+        <option value="$PROJECT_DIR$/day11/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_1/pom.xml" />
+        <option value="$PROJECT_DIR$/day12/pom.xml" />
+        <option value="$PROJECT_DIR$/day13_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/test_crud/pom.xml" />
+        <option value="$PROJECT_DIR$/day13_ssm_1/pom.xml" />
+        <option value="$PROJECT_DIR$/test/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

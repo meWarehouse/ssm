@@ -1,0 +1,1896 @@
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590166830548" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166830558" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166830558" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166830570" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166830570" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166830703" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166831609" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1866875501.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166831609" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166831613" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166831644" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166831677" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166831679" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166831680" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166831680" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1866875501 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590166851123" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166851130" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166851130" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166851130" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166851130" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166851258" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166852111" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1866875501.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166852111" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166852115" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166852138" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166852160" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166852162" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166852163" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166852163" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1866875501 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590166890294" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166890304" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166890304" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166890304" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166890304" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166890433" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166891324" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166891325" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166891329" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? AND last_name LIKE ? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166891355" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), 卡迪那(String), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166891381" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166891385" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166891385" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166891385" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590166912569" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166912585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166912585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166912585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166912585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166912737" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166913657" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1866875501.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166913657" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166913661" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE AND last_name LIKE ? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166913692" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 卡迪那(String), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166913705" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166913706" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f46426d]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166913706" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1866875501 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590166927703" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166927712" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166927712" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166927712" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166927712" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166927857" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166928787" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166928787" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166928791" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? AND last_name LIKE ? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166928818" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), 卡迪那(String), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166928842" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166928845" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166928855" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166928855" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590166938313" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166938332" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166938332" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166938332" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166938332" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166938458" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166939395" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166939395" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166939399" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? AND last_name LIKE ? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166939424" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), 卡迪那(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590166939449" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166939452" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590166939453" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590166939453" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167156587" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167156597" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167156597" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167156598" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167156598" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167156731" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167157592" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167157592" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167157596" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? AND last_name LIKE ? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167157625" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), 卡迪那(String), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167157654" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167157657" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167157658" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167157658" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167167192" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167167204" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167167204" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167167205" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167167205" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167167351" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167168320" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1249875355.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167168320" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a7f959b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167168325" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE last_name LIKE ? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167168352" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 卡迪那(String), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167168375" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167168378" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a7f959b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167168379" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a7f959b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167168379" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1249875355 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167179902" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167179909" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167179910" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167179910" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167179910" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167180038" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167180912" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1249875355.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167180913" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a7f959b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167180917" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE last_name LIKE ? AND email=? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167180945" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 卡迪那(String), at@kadina.com(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionW" timestamp="1590167180965" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167180968" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a7f959b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167180969" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a7f959b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167180969" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1249875355 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167188287" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167188300" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167188301" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167188301" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167188301" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167188427" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167189355" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167189355" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590167189359" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE AND last_name LIKE ? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionIf" timestamp="1590167189387" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 卡迪那(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167189403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167189403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167189404" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167387713" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167387723" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167387723" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167387724" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167387724" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167387880" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167388934" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167388934" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167388939" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee and | or id=? AND last_name LIKE ? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167388977" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), 卡迪那(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167388991" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167388992" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167388992" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167430653" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167430663" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167430664" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167430664" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167430664" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167430820" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167431753" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167431753" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167431758" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where id=? AND last_name LIKE ? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167431790" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer), 卡迪那(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167431816" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167431819" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167431820" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167431820" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167441844" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167441853" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167441853" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167441853" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167441853" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167441975" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167442793" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167442794" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167442798" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where last_name LIKE ? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167442826" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 卡迪那(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167442856" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167442858" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167442859" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167442859" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167450392" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167450402" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167450402" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167450403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167450403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167450532" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167451402" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1048855692.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167451402" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e84448c]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167451406" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where last_name LIKE ? AND gender=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167451434" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 卡迪那(String), 男(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167451461" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167451464" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e84448c]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167451465" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e84448c]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167451465" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1048855692 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167574028" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167574038" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167574038" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167574038" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167574038" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167574170" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167575043" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167575043" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167575049" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where last_name LIKE ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167575085" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167575113" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 3]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167575117" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167575118" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167575118" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167592446" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167592455" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167592455" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167592456" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167592456" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167592589" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167593525" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167593525" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167593530" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where last_name LIKE ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167593559" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167593582" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 3]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167593584" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167593585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167593585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167674384" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167674395" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167674395" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167674395" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167674395" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167674540" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167675510" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167675510" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167675515" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where last_name LIKE concat('%',?,'%') ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167675547" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167675581" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 3]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167675583" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167675584" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167675584" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590167703315" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167703325" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167703325" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167703325" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167703325" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167703471" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167704346" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1297836716.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167704346" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167704351" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee where last_name LIKE concat('%',?,'%') ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167704379" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: t(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionS" timestamp="1590167704401" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 3]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167704403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590167704403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d5b6aac]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590167704403" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1297836716 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590168356976" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168356989" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168356989" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168356989" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168356989" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168357142" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168358090" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168358090" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168358095" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE last_name= LIKE concat('%',?,'%') ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168358121" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: t(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168358133" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168358134" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168358134" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590168433878" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168433886" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168433886" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168433886" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168433886" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168434014" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168434899" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168434899" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168434903" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE last_name LIKE concat('%',?,'%') ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168434930" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: t(String)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168434953" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 3]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168434955" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168434956" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168434956" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590168448868" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168448882" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168448882" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168448882" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168448882" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168449014" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168449896" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1270038388.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168449897" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4bb33f74]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168449901" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id=? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168449926" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168449947" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168449950" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4bb33f74]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168449950" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4bb33f74]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168449951" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1270038388 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590168472972" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168472984" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168472984" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168472984" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168472984" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168473108" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168473978" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 2051120548.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168473978" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7a419da4]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168473982" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE email LIKE concat('%','','%') ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168474009" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168474034" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 7]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168474036" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7a419da4]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168474036" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7a419da4]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168474036" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 2051120548 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590168601427" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168601435" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168601435" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168601435" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168601435" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168601557" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168602453" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1292040526.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168602453" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168602458" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE 1==1 ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168602489" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168602501" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168602501" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168602502" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1292040526 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590168616832" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168616840" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168616840" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168616840" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168616840" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168616975" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168617794" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1292040526.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168617794" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168617798" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE 1=1 ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168617826" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getEmployeeByConditionC" timestamp="1590168617858" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 7]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168617860" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590168617861" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590168617861" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1292040526 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169065222" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169065230" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169065230" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169065230" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169065230" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169065357" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169066208" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 1292040526.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169066208" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169066212" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: UPDATE tbl_employee SET last_name=?, gender = ?, WHERE id = ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169066239" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String), 男(String), 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169066255" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Rolling back JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169066266" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169066267" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d02f94e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169066267" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 1292040526 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169100387" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169100398" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169100399" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169100399" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169100399" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169100557" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169101532" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 510147134.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169101532" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169101536" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: UPDATE tbl_employee SET last_name=?, gender = ?, WHERE id = ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169101567" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String), 男(String), 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169101584" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Rolling back JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169101584" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169101585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169101585" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 510147134 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169134420" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169134433" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169134433" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169134433" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169134433" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169134562" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169135444" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 510147134.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169135444" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169135448" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: UPDATE tbl_employee SET last_name=?, gender = ?, WHERE id = ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169135477" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String), 男(String), 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169135488" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Rolling back JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169135488" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169135489" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169135489" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 510147134 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169154467" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169154483" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169154483" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169154483" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169154483" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169154631" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169155665" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 510147134.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169155665" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169155670" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: UPDATE tbl_employee SET last_name=?, gender = ? WHERE id = ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169155709" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: %t%(String), 男(String), 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp" timestamp="1590169155723" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==    Updates: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169155723" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169155729" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169155730" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1e683a3e]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169155730" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 510147134 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169214145" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169214154" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169214155" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169214155" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169214155" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169254071" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169254083" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169254083" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169254083" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169254083" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169254223" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169255174" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 542365801.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169255174" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp1" timestamp="1590169255178" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: UPDATE tbl_employee set last_name=?, gender = ?, WHERE id = ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp1" timestamp="1590169255210" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 009(String), 男(String), 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169255226" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Rolling back JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169255227" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169255227" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169255227" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 542365801 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169298032" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169298044" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169298044" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169298044" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169298044" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169298190" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169299058" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 542365801.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169299058" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp1" timestamp="1590169299062" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: UPDATE tbl_employee set last_name=?, gender = ? WHERE id = ? ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp1" timestamp="1590169299089" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 009(String), 男(String), 5(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.updateEmp1" timestamp="1590169299102" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==    Updates: 1]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169299103" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169299108" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169299108" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2053d869]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169299109" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 542365801 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590169767234" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169767245" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169767245" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169767245" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169767245" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169767398" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169768482" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 657381435.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169768482" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@272ed83b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590169768488" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id IN(1,2,3) ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590169768522" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590169768557" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 3]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169768560" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@272ed83b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590169768561" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@272ed83b]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590169768561" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 657381435 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590170001417" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170001430" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170001431" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170001431" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170001431" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590170242643" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170242653" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170242653" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170242653" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170242653" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170242788" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170243639" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170243639" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590170243643" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id IN ( ? , ? , ? , ? ) ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590170243667" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590170243690" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 4]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170243692" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170243693" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170243693" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590170260650" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170260662" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170260662" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170260662" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170260662" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.logging.LogFactory" timestamp="1590170288268" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170288277" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170288277" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170288277" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170288277" level="DEBUG" thread="main">
+<log4j:message><![CDATA[PooledDataSource forcefully closed/removed all connections.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170288415" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Opening JDBC Connection]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170289314" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Created connection 63387985.]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170289314" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590170289318" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==>  Preparing: SELECT * FROM tbl_employee WHERE id IN ( ? , ? , ? , ? ) ]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590170289348" level="DEBUG" thread="main">
+<log4j:message><![CDATA[==> Parameters: 1(Integer), 2(Integer), 3(Integer), 4(Integer)]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="com.kc.mybatis_2.dao.EmployeeMapper.getByForeach" timestamp="1590170289372" level="DEBUG" thread="main">
+<log4j:message><![CDATA[<==      Total: 4]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170289374" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.transaction.jdbc.JdbcTransaction" timestamp="1590170289375" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3c73951]]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.apache.ibatis.datasource.pooled.PooledDataSource" timestamp="1590170289375" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Returned connection 63387985 to pool.]]></log4j:message>
+</log4j:event>
+

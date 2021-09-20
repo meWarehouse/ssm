@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day10/day10.iml" filepath="$PROJECT_DIR$/day10/day10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day11/day11.iml" filepath="$PROJECT_DIR$/day11/day11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day12/day12.iml" filepath="$PROJECT_DIR$/day12/day12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day13_ssm/day13_ssm.iml" filepath="$PROJECT_DIR$/day13_ssm/day13_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day13_ssm_1/day13_ssm_1.iml" filepath="$PROJECT_DIR$/day13_ssm_1/day13_ssm_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis_1/mybatis_1.iml" filepath="$PROJECT_DIR$/mybatis_1/mybatis_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ssm.iml" filepath="$PROJECT_DIR$/.idea/ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_crud/test_crud.iml" filepath="$PROJECT_DIR$/test_crud/test_crud.iml" />
+    </modules>
+  </component>
+</project>

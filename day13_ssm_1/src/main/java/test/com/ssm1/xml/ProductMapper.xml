@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.ProductMapper">
+
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.Product">
+        <!--    p_id  short_title  long_title   price    nums   sales  category_id     -->
+        <id column="p_id" property="id"/>
+        <result column="short_title" property="shortTitle"/>
+        <result column="long_title" property="longTitle"/>
+        <result column="price" property="price"/>
+        <result column="nums" property="nums"/>
+        <result column="sales" property="sales"/>
+        <result column="category_id" property="categoryId"/>
+    </resultMap>
+
+    <!-- int addProduct(Product product); -->
+
+    <insert id="addProduct">
+        INSERT INTO sm_product(short_title,long_title,price,nums,category_id) VALUES (#{shortTitle},#{longTitle},#{price},#{nums},#{categoryId})
+    </insert>
+
+<!--    List<Product> listPage(Map<String, Integer> params);-->
+    <!--
+        SELECT * FROM sm_product WHERE category_id = 6 LIMIT 0,3;
+    -->
+    <select id="listPage" resultMap="BaseResult">
+        SELECT * FROM sm_product
+         <where>
+             <if test="categoryId != null and categoryId != 0">
+                 category_id = #{categoryId}
+             </if>
+         </where>
+         LIMIT #{start},#{limit};
+    </select>
+
+<!--    int getCount();-->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM sm_product
+        <where>
+            <if test="categoryId != null and categoryId != 0">
+                category_id = #{categoryId}
+            </if>
+        </where>
+    </select>
+
+    <!-- void saveImgPath(@Param("path") String path, @Param("first") Integer first,@Param("id") Integer id); -->
+    <!-- i_id  i_path  is_first    p_id   -->
+    <insert id="saveImgPath">
+        INSERT INTO sm_productimg(i_path,is_first,p_id) VALUES(#{path},#{first},#{id});
+    </insert>
+
+    <!-- void deleteAllFile(Integer id); -->
+    <delete id="deleteAllFile">
+        DELETE FROM sm_productimg WHERE p_id = #{param1};
+    </delete>
+
+</mapper>

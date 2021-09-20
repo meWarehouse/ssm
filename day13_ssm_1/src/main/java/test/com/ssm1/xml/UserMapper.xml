@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.UserMapper">
+
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.User">
+        <!--id  user_name  user_password  birthday  gender   -->
+        <id property="id" column="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="birthday" property="birthday"/>
+        <result column="gender" property="gender"/>
+        <result column="head_icon" property="headIcon"/>
+    </resultMap>
+
+    <!-- int updateRid(Integer uid, Integer rid); -->
+    <update id="updateRid">
+        UPDATE sm_user SET r_id = #{rid} WHERE id=#{uid};
+    </update>
+
+    <!-- List<User> test(); -->
+    <select id="test" resultMap="BaseResult">
+        SELECT * FROM sm_user;
+    </select>
+
+     <!--List<User> listPage(Map<String, Integer> params);  -->
+    <select id="listPage" resultMap="BaseResult">
+        SELECT * FROM sm_user LIMIT #{start},#{limit};
+    </select>
+
+     <!--int getCount(); -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(id) FROM sm_user;
+    </select>
+
+
+    <!--boolean deleteById(Integer userId);-->
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM sm_user WHERE id = #{param1}
+    </delete>
+
+    <!-- int add(User user); -->
+    <insert id="add" parameterType="test.com.ssm1.bean.User">
+        INSERT INTO sm_user(user_name,user_password,birthday,gender) VALUES(#{userName},#{userPassword},#{birthday},#{gender});
+    </insert>
+
+     <!--int updateById(User user); -->
+    <update id="updateById" parameterType="test.com.ssm1.bean.User">
+        UPDATE sm_user SET user_name=#{userName},birthday=#{birthday},gender=#{gender}  WHERE id = #{id}
+    </update>
+
+    <!--User checkUserName(String userName);-->
+    <select id="checkUserName" resultMap="BaseResult">
+        SELECT * FROM sm_user WHERE user_name=#{param1};
+    </select>
+
+    <!--User selectById(Integer id); -->
+    <select id="selectById" resultMap="BaseResult" parameterType="int">
+         SELECT * FROM sm_user WHERE id=#{param1};
+    </select>
+
+    <!--User getUserForUsernameAndUserpassword(Map<String, Object> param); -->
+    <select id="getUserForUsernameAndUserpassword" resultMap="BaseResult">
+         SELECT * FROM sm_user WHERE user_name=#{name} AND user_password=#{password};
+    </select>
+
+<!--    int modifyPassword(Map<String, Object> param);-->
+    <update id="modifyPassword" parameterType="map">
+        UPDATE sm_user SET user_password = #{password} WHERE id=#{id};
+    </update>
+
+    <!--void updateIcon(Map<String, Object> param);-->
+    <update id="updateIcon" parameterType="map">
+        UPDATE sm_user SET head_icon = #{icon} WHERE id=#{id};
+    </update>
+
+</mapper>

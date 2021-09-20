@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.CategoryMapper">
+
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.Category">
+        <!--   c_id  c_name                p_id  c_order  c_level   -->
+        <id column="c_id" property="id"/>
+        <result column="c_name" property="name"/>
+        <result column="p_id" property="pId"/>
+        <result column="c_order" property="order"/>
+        <result column="c_level" property="level"/>
+    </resultMap>
+
+    <!-- List<Category> getCategoryLevelAll(Map<String, Object> param); -->
+    <!--
+        SELECT * FROM sm_category WHERE c_level = 1 ORDER BY c_order  LIMIT 1,3;
+        SELECT * FROM sm_category WHERE c_level = 2 AND p_id=4 ORDER BY c_order  LIMIT 0,3;
+
+        SELECT * FROM sm_category WHERE c_id = 1;
+        SELECT * FROM sm_category WHERE c_order = 2 AND c_level = 1;
+        SELECT * FROM sm_category WHERE p_id = 1 AND c_order = 2;
+    -->
+    <select id="getCategoryLevelAll" resultMap="BaseResult">
+        SELECT * FROM sm_category
+        <where>
+            <if test="id != null and id != 0">
+                c_id=#{id}
+            </if>
+            <if test="level != null and level != 0">
+                AND c_level=#{level}
+            </if>
+            <if test="pId != null and pId != 0">
+                AND p_id=#{pId}
+            </if>
+            <if test="order != null and order != 0">
+                AND c_order=#{order}
+            </if>
+        </where>
+        ORDER BY c_order LIMIT #{start},#{limit};
+    </select>
+
+    <!-- List<Category> twoLevelMsg(String pId, int i); -->
+    <!--
+        SELECT * FROM sm_category WHERE p_id = 1 AND c_level =  2
+    -->
+    <select id="twoLevelMsg" resultMap="BaseResult">
+        SELECT * FROM sm_category WHERE p_id = #{param1} AND c_level =  #{param2};
+    </select>
+
+
+    <!-- int getCategoryLevelCount(); -->
+    <!--
+        SELECT COUNT(*) FROM sm_category WHERE c_level = 1
+        SELECT COUNT(*) FROM sm_category WHERE c_level = 2 AND p_id=4
+    -->
+    <select id="getCategoryLevelCount" resultType="int">
+        SELECT COUNT(*) FROM sm_category
+        <where>
+            <if test="level != null and level != 0">
+                c_level=#{level}
+            </if>
+            <if test="pId != null and pId != 0">
+                AND p_id=#{pId}
+            </if>
+        </where>
+    </select>
+
+    <!-- List<Category> selectLevel(int i); -->
+    <select id="selectLevel" resultMap="BaseResult">
+        SELECT * FROM sm_category WHERE c_level = #{param1};
+    </select>
+
+
+    <!--    int getMaxOrder(Map<String, Object> param);-->
+    <!--
+        SELECT MAX(c_order) FROM sm_category WHERE c_level = 1
+        SELECT MAX(c_order) FROM sm_category WHERE p_id = 1
+
+    -->
+    <select id="getMaxOrder" resultType="int">
+        SELECT MAX(c_order) FROM sm_category
+        <where>
+            <choose>
+                <when test="level != null and level != 0">
+                    c_level = #{level}
+                </when>
+                <when test="pId != null and pId != 0">
+                    p_id = #{pId}
+                </when>
+            </choose>
+        </where>
+    </select>
+
+    <!--    boolean addCategory(Category category);-->
+    <!--
+        INSERT INTO sm_category(c_name,p_id,c_order,c_level) VALUES()
+    -->
+    <insert id="addCategory">
+        INSERT INTO sm_category(c_name,p_id,c_order,c_level) VALUES(#{name},#{pId},#{order},#{level});
+    </insert>
+
+    <!-- int delete(Integer id); -->
+    <delete id="delete">
+        DELETE FROM sm_category WHERE c_id = #{param1};
+    </delete>
+
+    <!-- int updateCategory(Map<String, Object> param); -->
+    <update id="updateCategory" parameterType="map">
+        UPDATE sm_category
+
+        <set>
+            <if test="name != null and name.trim() != ''">
+                c_name = #{name},
+            </if>
+            <if test="order != null or order != 0">
+                c_order = #{order}
+            </if>
+        </set>
+        <where>
+            c_id = #{id};
+        </where>
+
+
+    </update>
+
+    <!--
+        SELECT * FROM sm_category WHERE c_id = 1;
+        SELECT * FROM sm_category WHERE p_id = 1 AND c_order = 2;
+    -->
+
+    <!--    Category getCategoryByIdOrOrder(Map<String, Object> param1);-->
+    <select id="getCategoryByIdOrOrder" resultMap="BaseResult">
+        SELECT * FROM sm_category
+        <where>
+            <choose>
+                <when test="id != null  and id != 0">
+                    c_id = #{id}
+                </when>
+                <when test="order != null and order != 0">
+                    c_order = #{order}
+                </when>
+            </choose>
+            AND c_level = 1;
+        </where>
+
+    </select>
+
+
+</mapper>

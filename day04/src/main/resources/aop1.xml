@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+
+<!--    <bean id="clientDao" class="com.kc.aop1.ClientDaoImpl"/>-->
+<!--    <bean id="userDao" class="com.kc.aop1.UserDaoImpl"/>-->
+
+    <!-- 保存通知内容的 bean  -->
+    <bean id="daoAdvice" class="com.kc.aop1.DaoAdvice"/>
+
+
+    <!-- proxy-target-class="true" cglib 代理  false jdk 代理 -->
+    <aop:config proxy-target-class="true">
+        <!-- 切面：切入点 + 通知 -->
+        <aop:aspect ref="daoAdvice">
+            <!--
+                切入点 切入点表达式 execution(* com.kc.aop1.*Impl.*(..))
+                * com.kc.aop1.*Impl.*(..) 任何返回值类型(*) com.kc.aop1包中的以Impl结尾的所有类(com.kc.aop1.*Impl) 任何方法(*) 任何参数(..)
+             -->
+            <aop:pointcut id="daoPointcut" expression="execution(* com.kc.aop1.*Impl.*(..))"/>
+
+            <!--
+                几种切入点表达式：
+                    execution(public * *(..)) 所有public方法
+                    execution(* set*(..)) 所有名称以set开头的方法
+                    execution(* jee.pk.UserDao.*(..)) 所有UserDao接口中定义的方法
+                    execution(* jee.pk.*.*(..)) jee.pk包中的所有方法
+                    execution(* jee.pk..*.*(..)) jee.pk包和子包中的所有方法
+
+
+
+            -->
+
+
+            <!-- com.kc.aop1.DaoAdvice 类的 beforeAdvice 方法  -->
+<!--            <aop:before pointcut-ref="daoPointcut" method="beforeAdvice"/>-->
+<!--            <aop:after method="afterAdvice" pointcut-ref="daoPointcut"/>-->
+<!--            <aop:around method="aroundAdvice" pointcut-ref="daoPointcut"/>-->
+<!--            <aop:after-returning method="afterReturningAdvice" pointcut-ref="daoPointcut" returning="r"/>-->
+<!--            <aop:after-throwing method="afterThrowingAdvice" pointcut-ref="daoPointcut" throwing="e"/>-->
+
+            <!--
+                before 前置通知
+                after 最终通知，不管方法是否正常结束，都会得到执行
+                around 环绕通知，包含其他通知，可以控制目标方法的执行，可以修改目标方法的返回值
+                after-returning 后置通知，当方法正常结束时会得到执行，如果方法抛出异常就不会得到执行
+                after-throwing 例外通知，当方法抛出异常时会得到执行
+                获取连接点签名和方法参数：JoinPoint和ProceedingJoinPoint。
+                在环绕通知中可以使用ProceedingJoinPoint，其他通知中使用JoinPoint。
+                获取方法返回值和抛出的异常
+
+            -->
+
+        </aop:aspect>
+    </aop:config>
+
+
+</beans>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smm.dao.EmpMappper">
+<!--  id  last_name        age  idCard   gender  job        email              birthday      d_id -->
+    <resultMap id="empMap" type="com.smm.ben.Employee">
+        <id property="id" column="id"/>
+        <result property="lastName" column="last_name"/>
+        <result property="age" column="age"/>
+        <result property="idcard" column="idCard"/>
+        <result property="gender" column="gender"/>
+        <result property="job" column="job"/>
+        <result property="email" column="email"/>
+        <result property="birthday" column="birthday"/>
+        <result property="did" column="d_id"/>
+    </resultMap>
+
+    <!--  int getTest(); -->
+    <select id="getTest" resultMap="empMap">
+        SELECT * FROM tbl_emp;
+    </select>
+
+    <!-- int  add(Employee employee); -->
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO tbl_emp(last_name,age,gender,email,d_id) VALUES(#{lastName},#{age},#{gender},#{email},#{did});
+    </insert>
+
+    <!--    List<Employee> emploeeListPage(Map<String,Object> map);-->
+    <select id="emploeeListPage" resultMap="empMap" parameterType="map">
+        SELECT * FROM tbl_emp limit #{start},#{limit};
+    </select>
+
+    <!-- int getCount(); -->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(id) FROM tbl_emp;
+    </select>
+
+    <!--    int deleteById(Integer id);-->
+    <delete id="deleteById" parameterType="int">
+        DELETE FROM tbl_emp WHERE id = #{id};
+    </delete>
+    <!-- Employee getById(Integer id); -->
+    <select id="getById" resultMap="empMap" parameterType="int">
+        SELECT * FROM tbl_emp WHERE id = #{id};
+    </select>
+
+<!--    Employee getEmpBylastnameAndIdcard(String lastName, String idcard);-->
+    <select id="getEmpBylastnameAndIdcard" resultMap="empMap">
+        SELECT * FROM tbl_emp WHERE last_name=#{param1} AND idCard=#{param2};
+    </select>
+
+<!--    Employee getEmpByIdcard(String idcard);-->
+    <select id="getEmpByIdcard" resultMap="empMap">
+        SELECT * FROM tbl_emp WHERE idCard = #{idcard};
+    </select>
+
+<!--    int update(Employee employee);-->
+    <update id="update" parameterType="com.smm.ben.Employee">
+        UPDATE tbl_emp SET last_name=#{lastName},age=#{age},idCard=#{idcard},gender=#{gender},job=#{job},email=#{email},birthday=#{birthday},d_id=#{did} WHERE id=#{id};
+    </update>
+
+
+
+</mapper>

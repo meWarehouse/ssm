@@ -1,0 +1,28 @@
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589990465586" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589991311448" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589991382934" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589991393430" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589991426194" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589993375819" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="org.springframework.context.support.ClassPathXmlApplicationContext" timestamp="1589993385866" level="DEBUG" thread="main">
+<log4j:message><![CDATA[Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1e81f4dc]]></log4j:message>
+</log4j:event>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                            https://www.springframework.org/schema/beans/spring-beans.xsd
+                  http://www.springframework.org/schema/aop
+                  https://www.springframework.org/schema/aop/spring-aop.xsd
+                  http://www.springframework.org/schema/tx
+                  https://www.springframework.org/schema/tx/spring-tx.xsd
+                            http://www.springframework.org/schema/context
+                            https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.kc.jdbc_1"/>
+
+    <!-- 导入 properties 配置文件  -->
+    <context:property-placeholder location="jdbc.properties"/>
+
+    <!-- 加载配置文件信息 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driverClassName}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${uName}"/>
+        <property name="password" value="${password}"/>
+        <property name="initialSize" value="3"/>
+    </bean>
+
+    <!--注册事务管理器-->
+    <bean id="txManger" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 使用xml的声明式事务 -->
+
+<!--    &lt;!&ndash; 配置一个事物通知 &ndash;&gt;-->
+<!--    <tx:advice id="txAdvice" transaction-manager="txManger">-->
+<!--        <tx:attributes>-->
+<!--            &lt;!&ndash; 以 get 开头的方法都使用只读事物，只读事物可以提高查询效率 &ndash;&gt;-->
+<!--            <tx:method name="get*" read-only="true"/>-->
+<!--            <tx:method name="*"/>-->
+<!--        </tx:attributes>-->
+<!--    </tx:advice>-->
+
+<!--    <aop:config proxy-target-class="true">-->
+<!--        <aop:pointcut id="aopPointcut" expression="execution(* com.kc.jdbc_1.UserService.*(..))"/>-->
+<!--        &lt;!&ndash; 通知器：通知与切入点 &ndash;&gt;-->
+<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="aopPointcut"/>-->
+<!--    </aop:config>-->
+
+    <!-- 激活 @Transaction 注解 -->
+    <tx:annotation-driven transaction-manager="txManger" proxy-target-class="true"/>
+
+</beans>

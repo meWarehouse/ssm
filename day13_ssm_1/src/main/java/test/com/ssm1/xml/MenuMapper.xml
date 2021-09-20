@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.MenuMapper">
+
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.Menu">
+        <!--   m_id  m_name  m_url    m_pid   -->
+        <id column="m_id" property="id"/>
+        <result column="m_name" property="name"/>
+        <result column="m_url" property="url"/>
+        <result column="m_pid" property="pid"/>
+    </resultMap>
+
+<!--    //查-->
+<!--    int getCount();-->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM sm_menue;
+    </select>
+
+    <!-- 查询所有一级菜单 -->
+    <select id="selectAll" resultMap="BaseResult">
+        SELECT * FROM sm_menue WHERE m_pid = 0 ;
+    </select>
+<!--    List<Menu> selectPageList(Map<String,Object> map);-->
+    <select id="selectPageList" resultMap="BaseResult">
+        SELECT * FROM sm_menue
+        <where>
+            <if test="pid != null and pid != 0">
+                m_pid=#{pid}
+            </if>
+        </where>
+        LIMIT #{start},#{limit};
+    </select>
+
+    <!-- Menu getMenu(Integer id); -->
+    <select id="getMenu" parameterType="int" resultMap="BaseResult">
+        SELECT * FROM sm_menue WHERE m_id = #{param} ;
+    </select>
+
+
+<!--    // 增-->
+<!--    int addItem(Menu menu);-->
+    <insert id="addItem">
+        INSERT INTO sm_menue(m_name,m_url,m_pid) VALUES (#{name},#{url},#{pid})
+    </insert>
+
+<!--    // 改-->
+<!--    int updateItem(Menu menu);-->
+    <update id="updateItem">
+        UPDATE sm_menue SET m_name=#{name},m_url=#{url},m_pid=#{pid} where m_id=#{id};
+    </update>
+
+    <!-- int delMenu(Integer id); -->
+    <delete id="delMenu" parameterType="int">
+        DELETE FROM sm_menue WHERE m_id = #{param};
+    </delete>
+
+
+</mapper>

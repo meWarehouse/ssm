@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.mybatis_1.UserMapper">
+
+    <!-- id="方法名" resultType="返回值类型 "  #{参数} -->
+    <select id="get" parameterType="int" resultType="com.kc.mybatis_1.User">
+        select * from t_user where id = #{id}
+  </select>
+
+    <!-- parameterType="参数类型" -->
+    <insert id="insert" parameterType="com.kc.mybatis_1.User" >
+        insert into t_user(name,age,aa) values (#{name},#{age},#{aa})
+    </insert>
+    <!-- useGeneratedKeys="true 返回主键 默认为false" keyProperty="id 主键名" -->
+    <insert id="insert1" parameterType="com.kc.mybatis_1.User" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user(name,age,aa) values (#{name},#{age},#{aa})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from t_user where id=#{id}
+    </delete>
+    <delete id="delete1" parameterType="java.lang.String">
+        delete from t_user where name=#{name}
+    </delete>
+
+    <update id="update" parameterType="com.kc.mybatis_1.User">
+        update t_user set name=#{name},age=#{age},aa=#{aa} where id=#{id}
+    </update>
+
+    <select id="select" resultType="com.kc.mybatis_1.User">
+        select * from t_user
+    </select>
+
+    <select id="getCount" resultType="int">
+        select count(id) from t_user
+    </select>
+
+
+    <!--       ************** 结果映射 **************          -->
+    <select id="getMap" parameterType="int" resultType="map">
+        select * from t_user where id = #{id}
+    </select>
+
+    <!--elect * from t_user where id = #{id}-->
+    <select id="get1" parameterType="int" resultType="com.kc.mybatis_1.User">
+        select u_id id,u_name name,u_age age,u_aa aa from t_user where u_id=#{id}
+    </select>
+
+    <!-- 创建结果集映射 -->
+    <resultMap id="userResultMap" type="com.kc.mybatis_1.User">
+        <!--   property="User 中的属性" 映射  column="表中对应列"    -->
+        <id property="id" column="u_id"/>
+        <result property="name" column="u_name"/>
+        <result property="age" column="u_age"/>
+        <result property="aa" column="u_aa"/>
+    </resultMap>
+
+<!--    <select id="get2" parameterType="int" resultType="com.kc.mybatis_1.User">-->
+<!--        select * from t_user where u_id = #{id}-->
+<!--    </select>-->
+    <select id="get2" parameterType="int" resultMap="userResultMap">
+        select * from t_user where u_id = #{id}
+    </select>
+
+<!--    <resultMap id="userDetaliResultMap" type="com.kc.mybatis_1.UserDetial">-->
+<!--        <id property="id" column="u_id"/>-->
+<!--        <result property="name" column="u_name"/>-->
+<!--        <result property="age" column="u_age"/>-->
+<!--        <result property="aa" column="u_aa"/>-->
+<!--        <result property="gender" column="u_gender"/>-->
+<!--    </resultMap>-->
+    <resultMap id="userDetaliResultMap" type="com.kc.mybatis_1.UserDetial" extends="userResultMap">
+        <result property="gender" column="u_gender"/>
+    </resultMap>
+
+    <select id="get3" parameterType="int" resultMap="userDetaliResultMap">
+        select * from t_user where u_id = #{id}
+    </select>
+
+
+<!--    <resultMap id="userAddressMessage" type="com.kc.mybatis_1.UserDetial">-->
+<!--        <id property="id" column="u_id"/>-->
+<!--        <result property="name" column="u_name"/>-->
+<!--        <result property="age" column="u_age"/>-->
+<!--        <result property="aa" column="u_aa"/>-->
+<!--        <result property="gender" column="u_gender"/>-->
+
+<!--        <result property="address.id" column="a_id"/>-->
+<!--        <result property="address.province" column="a_province"/>-->
+<!--        <result property="address.city" column="a_city"/>-->
+<!--        <result property="address.street" column="a_street"/>-->
+<!--        <result property="address.num" column="a_num"/>-->
+
+<!--    </resultMap>-->
+    <resultMap id="userAddressMessage" type="com.kc.mybatis_1.UserDetial">
+        <id property="id" column="u_id"/>
+        <result property="name" column="u_name"/>
+        <result property="age" column="u_age"/>
+        <result property="aa" column="u_aa"/>
+        <result property="gender" column="u_gender"/>
+
+        <association property="address" resultMap="addressMessage"/>
+
+    </resultMap>
+    <resultMap id="addressMessage" type="com.kc.mybatis_1.Address">
+        <result property="id" column="a_id"/>
+        <result property="province" column="a_province"/>
+        <result property="city" column="a_city"/>
+        <result property="street" column="a_street"/>
+        <result property="num" column="a_num"/>
+
+    </resultMap>
+
+    <select id="get4" parameterType="int" resultMap="userAddressMessage">
+        SELECT u.`u_id`,u.`u_name`,u.`u_age`,u.`u_aa`,u.`u_gender`,a.* FROM t_user u INNER JOIN t_address a ON u.a_id = a.a_id WHERE u.u_id=#{id}
+    </select>
+
+
+
+</mapper>

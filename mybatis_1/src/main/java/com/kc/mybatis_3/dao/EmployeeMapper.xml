@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.mybatis_3.dao.EmployeeMapper">
+
+    <!-- 开启缓存  需要序列化 public class Employee implements Serializable {} -->
+    <cache size="" readOnly="" flushInterval="" blocking="" eviction="" type=""></cache>
+
+
+    <!-- Employee getEmp(Integer id); -->
+    <select id="getEmp" resultType="com.kc.mybatis_3.bean.Employee">
+        SELECT * FROM tbl_employee WHERE id = #{id}
+    </select>
+
+
+</mapper>

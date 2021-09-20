@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.mybatis_2.dao.EmployeeMapper">
+
+    <!-- Employee getEmp(int id); -->
+    <select id="getEmp" resultType="com.kc.mybatis_2.bean.Employee">
+        SELECT * FROM tbl_employee WHERE id=${id}
+  </select>
+
+    <resultMap id="getDetailResult1" type="com.kc.mybatis_2.bean.Employee">
+        <!--     id  last_name     age  gender  email         d_id     did  dept_name   -->
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+
+        <result column="did" property="department.id"/>
+        <result column="dept_name" property="department.deptName"/>
+
+    </resultMap>
+
+    <resultMap id="getDetailResult2" type="com.kc.mybatis_2.bean.Employee">
+        <!--     id  last_name     age  gender  email         d_id     did  dept_name   -->
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+
+        <!--        <result column="did" property="department.id"/>-->
+        <!--        <result column="dept_name" property="department.deptName"/>-->
+
+        <association property="department" javaType="com.kc.mybatis_2.bean.Department">
+            <id column="did" property="id"/>
+            <result column="dept_name" property="deptName"/>
+        </association>
+
+    </resultMap>
+
+    <resultMap id="getDetailResult3" type="com.kc.mybatis_2.bean.Employee">
+        <!--     id  last_name     age  gender  email         d_id     did  dept_name   -->
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+
+        <association property="department" resultMap="getD"/>
+    </resultMap>
+
+    <resultMap id="getD" type="com.kc.mybatis_2.bean.Department">
+        <id column="did" property="id"/>
+        <result column="dept_name" property="deptName"/>
+    </resultMap>
+
+    <!--  select id="Employee getDetail(int id);   -->
+    <!--    <select id="getDetail" resultMap="getDetailResult3">-->
+    <!--        SELECT e.*,d.`id` did,d.`dept_name` dept_name FROM tbl_employee e INNER JOIN tbl_dept d ON e.`d_id` = d.`id` WHERE e.`id` = 1;-->
+    <!--    </select>-->
+
+
+    <resultMap id="getDetailResult4" type="com.kc.mybatis_2.bean.Employee">
+        <!--     id  last_name     age  gender  email         d_id     did  dept_name   -->
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+        <association property="department" select="g1" column="d_id"/>
+    </resultMap>
+    <resultMap id="getDetailResult5" type="com.kc.mybatis_2.bean.Employee">
+        <!--     id  last_name     age  gender  email         d_id     did  dept_name   -->
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="age" property="age"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+        <!--        <association property="department" select="g1" column="d_id"/>-->
+        <association property="department" column="d_id" select="com.kc.mybatis_2.dao.DeparmentMapper.getDept"/>
+
+    </resultMap>
+    <select id="getDetail" resultMap="getDetailResult5">
+        SELECT * FROM tbl_employee WHERE id=1;
+    </select>
+    <select id="g1" resultType="com.kc.mybatis_2.bean.Department">
+        SELECT * FROM tbl_dept WHERE id = 1;
+    </select>
+
+
+    <!-- List<Employee> getEmployeeByConditionIf(Employee employee); -->
+    <select id="getEmployeeByConditionIf" resultType="com.kc.mybatis_2.bean.Employee">
+        SELECT * FROM tbl_employee
+        WHERE
+        <if test="id != null">
+            id=#{id}
+        </if>
+        <if test="lastName != null and lastName != ''">
+            AND last_name LIKE #{lastName}
+        </if>
+        <if test="email != null  and  email.trim() != ''">
+            AND email=#{email}
+        </if>
+        <if test="gender != null">
+            AND gender=#{gender}
+        </if>
+
+    </select>
+
+    <select id="getEmployeeByConditionW" resultType="com.kc.mybatis_2.bean.Employee">
+        SELECT * FROM tbl_employee
+        <where>
+            <if test="id != null">
+                id=#{id}
+            </if>
+            <if test="lastName != null and lastName != ''">
+                AND last_name LIKE #{lastName}
+            </if>
+            <if test="email != null  and  email.trim() != ''">
+                AND email=#{email}
+            </if>
+            <if test="gender != null">
+                AND gender=#{gender}
+            </if>
+
+        </where>
+
+    </select>
+
+    <select id="getEmployeeByConditionS" resultType="com.kc.mybatis_2.bean.Employee">
+        SELECT * FROM tbl_employee
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                id=#{id}
+            </if>
+            <if test="lastName != null and lastName != ''">
+                AND last_name LIKE concat('%',#{lastName},'%')
+            </if>
+            <if test="email != null  and  email.trim() != ''">
+                AND email=#{email}
+            </if>
+            <if test="gender != null">
+                AND gender=#{gender}
+            </if>
+        </trim>
+
+    </select>
+
+    <select id="getEmployeeByConditionC" resultType="com.kc.mybatis_2.bean.Employee">
+        SELECT * FROM tbl_employee
+        <where>
+            <choose>
+                <when test="id != null">
+                    id=#{id}
+                </when>
+                <when test="lastName != null">
+                    last_name LIKE concat('%',#{lastName},'%')
+                </when>
+                <when test="email != null">
+                    email LIKE concat('%','${lastName}','%')
+                </when>
+                <otherwise>
+                    1=1
+                </otherwise>
+            </choose>
+
+        </where>
+    </select>
+
+    <!-- public void updateEmp(Employee employee); -->
+    <update id="updateEmp" parameterType="com.kc.mybatis_2.bean.Employee">
+        UPDATE tbl_employee
+        <set>
+            <if test="lastName != null">
+                last_name=#{lastName},
+            </if>
+            <if test="email != null">
+                email = #{email},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="email != null">
+                email = #{email}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+    <update id="updateEmp1" parameterType="com.kc.mybatis_2.bean.Employee">
+        UPDATE tbl_employee
+        <trim prefix="set" suffixOverrides=",">
+            <if test="lastName != null">
+                last_name=#{lastName},
+            </if>
+            <if test="email != null">
+                email = #{email},
+            </if>
+            <if test="gender != null">
+                gender = #{gender},
+            </if>
+            <if test="email != null">
+                email = #{email}
+            </if>
+        </trim>
+        WHERE id = #{id}
+    </update>
+
+    <!-- public List<Employee> getByForeach(List<Integer> ids); -->
+    <select id="getByForeach" resultType="com.kc.mybatis_2.bean.Employee">
+        SELECT * FROM tbl_employee WHERE id IN
+        <foreach collection="ids" item="item_id" separator="," open="(" close=")">
+            #{item_id}
+        </foreach>
+
+    </select>
+
+
+    <!-- public void addEmps(@Param("emps") List<Employee> emps); -->
+   <insert id="addEmps">
+        INSERT INTO tbl_employee(last_name,age,gender,email,d_id)
+        VALUES
+        <foreach collection="emps" item="emp" separator=",">
+            (#{emp.lastName},#{emp.age},#{emp.gender},#{emp.email},#{emp.department.id})
+        </foreach>
+    </insert>
+
+    <!-- 这种方式需要 allowMultiQueries=true 这种分号分隔多个 sql 也可以用于 删改的批量操作 -->
+  <insert id="addEmps">
+        <foreach collection="emps" item="emp" separator=";">
+            INSERT INTO tbl_employee(last_name,age,gender,email,d_id)
+            VALUES (#{emp.lastName},#{emp.age},#{emp.gender},#{emp.email},#{emp.department.id})
+        </foreach>
+
+    </insert>
+
+    <!--
+        Oracle  oracle 不支持 values(),()..
+    -->
+    <insert id="addEmps" databaseId="oracle">
+        <foreach collection="emps" item="emp" separator=";">
+            INSERT INTO tbl_employee(last_name,age,gender,email,d_id)
+            VALUES (#{emp.lastName},#{emp.age},#{emp.gender},#{emp.email},#{emp.department.id})
+        </foreach>
+
+    </insert>
+
+
+<!--
+    两个内置参数
+        不只是方法传递过来的参数可以被用来判断，取值。。。
+        mybatis 默认有两个内置参数
+            _parameter:代表整个参数
+               单个参数：_parameter 就是这个参数
+               多个参数：参数会被封装成一个 map ：_parameter 就代表这个 map
+
+           _databaseId：如果配置了databaseIdProvider 标签
+               _databaseId 就表示当前数据库的别名
+
+-->
+<!--    public List<Employee> getEmpsTestInnerParameter(Employee employee);-->
+    <select id="getEmpsTestInnerParameter" resultType="com.kc.mybatis_2.bean.Employee">
+        <if test="_databaseId == 'mysql'">
+            SELECT * FROM tbl_employee
+            <if test="_parameter != null">
+                WHERE last_name LIKE concat('%',#(_parameter.lastName),'%')
+            </if>
+        </if>
+        <if test="_databaseId=='oracle'">
+            SELECT * FROM tbl_employee
+            <if test="_parameter != null">
+                WHERE last_name = #(_parameter.lastName)
+            </if>
+        </if>
+    </select>
+
+
+
+
+</mapper>
+

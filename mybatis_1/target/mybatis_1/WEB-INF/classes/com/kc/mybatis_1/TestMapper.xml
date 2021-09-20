@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.mybatis_1.TestMapper">
+
+<!--    <select id="get1" resultType="com.kc.mybatis_1.bean.Mybatis1">-->
+<!--    <select id="get1" resultType="mybatis1">-->
+<!--    <select id="get1" resultType="Mybatis1">-->
+    <select id="get1" resultType="myba" databaseId="mysql">
+        SELECT * FROM mybatis_1;
+    </select>
+    <select id="get1" resultType="com.kc.mybatis_1.bean.Mybatis1" databaseId="oracle">
+        SELECT m_id id,lase_name name,m_email email FROM mybatis_1
+    </select>
+
+    <select id="getIdAndLastName" resultType="com.kc.mybatis_1.bean.Mybatis1">
+        SELECT * FROM mybatis_1 WHERE id = #{param1} AND last_name=#{param2}
+    </select>
+
+    <select id="getIdAndLastName1" resultType="com.kc.mybatis_1.bean.Mybatis1">
+        SELECT * FROM mybatis_1 WHERE id = #{id} AND last_name=#{name}
+    </select>
+
+    <!-- Mybatis1  getIdAndLastNameByMap(Map<String,Object> map); -->
+    <select id="getIdAndLastNameByMap" resultType="com.kc.mybatis_1.bean.Mybatis1">
+        SELECT * FROM mybatis_1 WHERE id = #{idMap} AND last_name=#{nameMap}
+    </select>
+
+    <!-- Mybatis1  getIdAndLastNameByMap1(Map<String,Object> map) -->
+<!--    SELECT * FROM #{tableName} WHERE id = #{idMap} AND last_name=#{nameMap} 错误 -->
+    <select id="getIdAndLastNameByMap1" resultType="com.kc.mybatis_1.bean.Mybatis1">
+        SELECT * FROM ${tableName} WHERE id = #{idMap} AND last_name=#{nameMap}
+    </select>
+
+
+<!--    int addFromOracle(Mybatis1 mybatis);-->
+    <insert id="addFromOracle" parameterType="com.kc.mybatis_1.bean.Mybatis1" databaseId="oracle">
+        INSERT INTO mybatis_1(lase_name,m_age,m_email) VALUES (#{lastName},#{age},#{email,jdbcType=NULL})
+    </insert>
+
+    <!-- Map<String,Object> getMybatisMap(Integer id); -->
+    <select id="getMybatisMap" parameterType="int" resultType="map">
+        SELECT * FROM mybatis_1 WHERE id=${id}
+    </select>
+
+    <!-- List<Map<String,Object>> getMybatisMap1(); -->
+    <select id="getMybatisMap1"  resultType="map">
+        SELECT * FROM mybatis_1
+    </select>
+
+
+</mapper>

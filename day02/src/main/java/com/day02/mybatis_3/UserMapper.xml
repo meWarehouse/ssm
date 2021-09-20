@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.day02.mybatis_3.UserMapper">
+
+    <resultMap id="getDetails" type="com.day02.mybatis_3.Details">
+        <id property="aid" column="a_aid"/>
+        <result property="hobby" column="a_hobby"/>
+        <result property="eat" column="a_eat"/>
+        <result property="height" column="a_height"/>
+        <result property="from" column="a_from"/>
+    </resultMap>
+
+    <select id="get" resultMap="getDetails">
+        SELECT * FROM user_1_detalis WHERE a_aid = #{id}
+    </select>
+
+
+    <!-- ********************************************************************* -->
+
+<!--    <resultMap id="userDetails" type="com.day02.mybatis_3.User">-->
+
+<!--        <id property="id" column="u_id"/>-->
+<!--        <result property="name" column="u_name"/>-->
+<!--        <result property="age" column="u_age"/>-->
+<!--        <result property="gender" column="u_gender"/>-->
+<!--        <result property="aid" column="u_aid"/>-->
+
+<!--        <result property="details.aid" column="a_aid"/>-->
+<!--        <result property="details.hobby" column="a_hobby"/>-->
+<!--        <result property="details.eat" column="a_eat"/>-->
+<!--        <result property="details.height" column="a_height"/>-->
+<!--        <result property="details.from" column="a_from"/>-->
+
+<!--        <association property="details" resultMap="detailsMessage"/>-->
+
+
+<!--    </resultMap>-->
+
+<!--    <resultMap id="detailsMessage" type="com.day02.mybatis_3.Details">-->
+<!--        <id property="aid" column="a_aid"/>-->
+<!--        <result property="hobby" column="a_hobby"/>-->
+<!--        <result property="eat" column="a_eat"/>-->
+<!--        <result property="height" column="a_height"/>-->
+<!--        <result property="from" column="a_from"/>-->
+<!--    </resultMap>-->
+
+
+<!--    <select id="getUser" resultMap="userDetails" parameterType="int" >-->
+<!--        SELECT * FROM user_1 u INNER JOIN user_1_detalis ud ON u.`u_aid` = ud.`a_aid`-->
+<!--    </select>-->
+
+
+
+    <resultMap id="userDetails" type="com.day02.mybatis_3.User">
+
+        <id property="id" column="u_id"/>
+        <result property="name" column="u_name"/>
+        <result property="age" column="u_age"/>
+        <result property="gender" column="u_gender"/>
+        <result property="aid" column="u_aid"/>
+
+        <association property="details" resultMap="getDetailsMessage"/>
+
+    </resultMap>
+
+    <resultMap id="getDetailsMessage" type="com.day02.mybatis_3.Details">
+
+        <id property="aid" column="a_aid"/>
+        <result property="hobby" column="a_hobby"/>
+        <result property="eat" column="a_eat"/>
+        <result property="height" column="a_height"/>
+        <result property="from" column="a_from"/>
+
+    </resultMap>
+
+    <select id="getUser" resultMap="userDetails" parameterType="int">
+        SELECT * FROM user_1
+    </select>
+    
+    <select id="getDetails" resultMap="getDetailsMessage">
+        SELECT * FROM user_1_detalis
+    </select>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+</mapper>

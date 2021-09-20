@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="test:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c93ba001-85e4-4423-8318-ad6e20cf7396" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../gulimall" beforeDir="false" afterPath="$PROJECT_DIR$/../../gulimall" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ssm" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="spring-beans.schema" />
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/developer_tools/maven/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\developer_tools\maven\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1by9l2q1zeSdP4iFRpXCcTsXzC5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle&#10;mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm_1\src\main\webapp\statics\images" />
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm_1\src\main\webapp\statics\js" />
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm_1\src\main\webapp\static" />
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm_1\src\main\webapp\WEB-INF" />
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm_1\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kc.ssm.bean" />
+      <recent name="com.kc.ssm.dao" />
+      <recent name="com.kc.mybatis_3.bean" />
+      <recent name="com.kc.mybatis_3.dao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm\src\main\webapp\WEB-INF\pages" />
+      <recent name="D:\Java_work\java_sen\ssm\day13_ssm\src\main\webapp" />
+      <recent name="D:\Java_work\java_sen\ssm\mybatis_1\src\main\resources" />
+      <recent name="D:\Java_work\java_sen\ssm\mybatis_1\src\main\resources\ssm" />
+      <recent name="D:\Java_work\java_sen\ssm\day12\src\main\webapp\WEB-INF\jsp" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.35">
+    <configuration name="BMG" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.crud.test.BMG" />
+      <module name="test_crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.crud.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.smm.Test" />
+      <module name="day13_ssm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.smm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapperTest.testCrud" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test_crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.crud.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test.crud.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.crud.test.MapperTest" />
+      <option name="METHOD_NAME" value="testCrud" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.test1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kc.mybatis_4.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kc.mybatis_4.test" />
+      <option name="MAIN_CLASS_NAME" value="com.kc.mybatis_4.test.Test" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mybatis_1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kc.mybatis_3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kc.mybatis_3" />
+      <option name="MAIN_CLASS_NAME" value="com.kc.mybatis_3.Test" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mybatis_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mybatis_2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generator" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/test_crud" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 9.0.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/test_war_exploded/" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="test:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/test_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ssm_2" />
+        <option name="JNDI_PORT" value="1098" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="13250" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="test:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.BMG" />
+      <item itemvalue="JUnit.Test.test1" />
+      <item itemvalue="JUnit.Test.test1 (1)" />
+      <item itemvalue="JUnit.MapperTest.testCrud" />
+      <item itemvalue="Maven.generator" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.35" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MapperTest.testCrud" />
+        <item itemvalue="Application.BMG" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.Test.test1" />
+        <item itemvalue="JUnit.Test.test1 (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.20923723" />
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c93ba001-85e4-4423-8318-ad6e20cf7396" name="Default Changelist" comment="" />
+      <created>1589593614504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589593614504</updated>
+      <workItem from="1589593618078" duration="3924000" />
+      <workItem from="1589639788603" duration="426000" />
+      <workItem from="1589698330143" duration="12375000" />
+      <workItem from="1589730923589" duration="3372000" />
+      <workItem from="1589734383651" duration="61000" />
+      <workItem from="1589734461468" duration="1945000" />
+      <workItem from="1589736455150" duration="738000" />
+      <workItem from="1589767887059" duration="1207000" />
+      <workItem from="1589774336989" duration="24701000" />
+      <workItem from="1589819164860" duration="2442000" />
+      <workItem from="1589879991767" duration="3508000" />
+      <workItem from="1589891307416" duration="42791000" />
+      <workItem from="1589994865240" duration="1285000" />
+      <workItem from="1589996308419" duration="111000" />
+      <workItem from="1589996475334" duration="409000" />
+      <workItem from="1590025000287" duration="14615000" />
+      <workItem from="1590157700328" duration="3521000" />
+      <workItem from="1590161858192" duration="11199000" />
+      <workItem from="1590236589152" duration="23316000" />
+      <workItem from="1590323282610" duration="1800000" />
+      <workItem from="1590325131452" duration="12325000" />
+      <workItem from="1590387567552" duration="7509000" />
+      <workItem from="1590406752392" duration="21971000" />
+      <workItem from="1590478333018" duration="13801000" />
+      <workItem from="1590502145241" duration="50000" />
+      <workItem from="1590502217182" duration="14857000" />
+      <workItem from="1590549723339" duration="16165000" />
+      <workItem from="1590582837832" duration="17771000" />
+      <workItem from="1590630348057" duration="5702000" />
+      <workItem from="1590641931143" duration="3643000" />
+      <workItem from="1590646083130" duration="38000" />
+      <workItem from="1590655410931" duration="1159000" />
+      <workItem from="1590656922093" duration="1705000" />
+      <workItem from="1590658794214" duration="1601000" />
+      <workItem from="1590662240287" duration="2419000" />
+      <workItem from="1590678296859" duration="12000" />
+      <workItem from="1590680029646" duration="606000" />
+      <workItem from="1590849865995" duration="29000" />
+      <workItem from="1590929726159" duration="13864000" />
+      <workItem from="1590975431448" duration="20029000" />
+      <workItem from="1591026234998" duration="24228000" />
+      <workItem from="1591109323337" duration="2470000" />
+      <workItem from="1591111818783" duration="2232000" />
+      <workItem from="1591114279987" duration="5049000" />
+      <workItem from="1591159402338" duration="19850000" />
+      <workItem from="1591179644044" duration="386000" />
+      <workItem from="1591182730653" duration="39000" />
+      <workItem from="1591182790385" duration="18803000" />
+      <workItem from="1591258187520" duration="36787000" />
+      <workItem from="1591356849818" duration="87000" />
+      <workItem from="1591356952867" duration="24408000" />
+      <workItem from="1591595839718" duration="79000" />
+      <workItem from="1591763959383" duration="16524000" />
+      <workItem from="1591852419092" duration="13756000" />
+      <workItem from="1591868030055" duration="18605000" />
+      <workItem from="1592025646201" duration="105000" />
+      <workItem from="1592373763915" duration="627000" />
+      <workItem from="1592378884682" duration="624000" />
+      <workItem from="1592583059075" duration="4295000" />
+      <workItem from="1592588624699" duration="150000" />
+      <workItem from="1593017687073" duration="429000" />
+      <workItem from="1605627186460" duration="1674000" />
+      <workItem from="1605687824815" duration="1912000" />
+      <workItem from="1606120758401" duration="1496000" />
+      <workItem from="1606129558821" duration="2796000" />
+      <workItem from="1606267784658" duration="693000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="531" y="235" key="FileChooserDialogImpl" timestamp="1605627470304">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="531" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1605627470304" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day11/src/main/webapp/WEB-INF/jsp3/login.jsp</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mybatis_1/src/main/java/com/kc/ssm1/dao/EmployeeMapper.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day12/src/main/java/com/kc/ssm1/UserController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mybatis_1/src/main/java/com/kc/mybatis_3/Test.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.3/mybatis-3.5.3-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day13_ssm/src/main/java/com/smm/Test.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day13_ssm/src/main/java/com/smm/controller/EmpController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day13_ssm/src/main/java/com/smm/controller/PasswordModelController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day13_ssm_1/src/main/java/test/com/ssm1/service/CategoryService.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/day13_ssm_1/src/main/java/test/com/ssm1/controller/LoginController.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day12/src/main/java/com/kc/ssm1/UserService.java</url>
+          <line>27</line>
+          <properties class="com.kc.ssm1.UserService" method="delete">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/day13_ssm/src/main/java/com/smm/controller/EmpController.java</url>
+          <line>112</line>
+          <properties class="com.smm.controller.EmpController" method="update">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

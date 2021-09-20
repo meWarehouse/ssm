@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.mybatis_2.TestMapper">
+
+    <resultMap id="getResultClasses" type="com.kc.mybatis_2.Classes">
+        <id property="cid" column="c_id"/>
+        <result property="cname" column="c_name"/>
+    </resultMap>
+    <select id="get2" resultMap="getResultClasses" parameterType="int">
+        select * from classes where c_id = #{id}
+    </select>
+
+    <resultMap id="getResultStudents" type="com.kc.mybatis_2.Students">
+        <id property="sid" column="s_id"/>
+        <result property="sno" column="s_no"/>
+        <result property="sname" column="s_name"/>
+        <result property="sgender" column="s_gender"/>
+        <result property="cid" column="c_id"/>
+    </resultMap>
+    <select id="get1" resultMap="getResultStudents" parameterType="int">
+        select * from students where s_id=#{id}
+    </select>
+
+    <!-- ***************************************************************** -->
+
+
+
+    <resultMap id="get3Stus" type="com.kc.mybatis_2.Students">
+        <id property="sid" column="s_id"/>
+        <result property="sno" column="s_no"/>
+        <result property="sname" column="s_name"/>
+        <result property="sgender" column="s_gender"/>
+
+    </resultMap>
+    <resultMap id="get3Message" type="com.kc.mybatis_2.Classes">
+
+        <id property="cid" column="c_id"/>
+        <result property="cname" column="c_name"/>
+        <association property="studertsList" resultMap="get3Stus"/>
+    </resultMap>
+
+    <select id="get3" resultMap="get3Message" parameterType="int">
+        SELECT c.*,s.`c_id`,s.`s_no`,s.`s_name`,s.`s_gender` FROM classes c INNER JOIN students s ON c.`c_id` = s.`c_id` WHERE c.`c_id` = #{id}
+    </select>
+
+    <!-- ***************************************************************** -->
+
+    <resultMap id="get4Message" type="com.kc.mybatis_2.Students">
+        <id property="sid" column="s_id"/>
+        <result property="sno" column="s_no"/>
+        <result property="sname" column="s_name"/>
+        <result property="sgender" column="s_gender"/>
+    </resultMap>
+    <resultMap id="getClasses4" type="com.kc.mybatis_2.Classes">
+        <id property="cid" column="c_id"/>
+        <result property="cname" column="c_name"/>
+
+        <association property="studertsList" column="c_id" select="getStudent"/>
+
+    </resultMap>
+    <select id="get4" resultMap="getClasses4" parameterType="int">
+        SELECT * FROM classes WHERE c_id = #{id}
+    </select>
+
+    <select id="getStudent" resultMap="get4Message" parameterType="int">
+        SELECT * FROM students WHERE c_id = #{id}
+    </select>
+
+    <!-- ******************   mybatis的N+1问题    ***************************** -->
+
+
+    <resultMap id="getClasses5" type="com.kc.mybatis_2.Classes">
+        <id property="cid" column="c_id"/>
+        <result property="cname" column="c_name"/>
+        <!-- 嵌套 select （可能出现 N+1 问题） -->
+        <association property="studertsList" column="c_id" select="getStudent5"/>
+
+    </resultMap>
+    <resultMap id="getMessage5" type="com.kc.mybatis_2.Students">
+        <id property="sid" column="s_id"/>
+        <result property="sno" column="s_no"/>
+        <result property="sname" column="s_name"/>
+        <result property="sgender" column="s_gender"/>
+    </resultMap>
+
+    <select id="get5" resultMap="getClasses5">
+        SELECT * FROM classes;
+    </select>
+    <select id="getStudent5" resultMap="getMessage5" parameterType="int">
+        SELECT * FROM students WHERE c_id = #{id}
+    </select>
+    
+    <!--  **********  ****************  -->
+
+    <resultMap id="getClesses6" type="com.kc.mybatis_2.Classes">
+        <id property="cid" column="c_id"/>
+        <result property="cname" column="c_name"/>
+
+
+        <!-- 嵌套 resultMap 不会产生 N+1 问题 -->
+        <association property="studertsList" resultMap="getStudent6"/>
+
+    </resultMap>
+
+    <resultMap id="getStudent6" type="com.kc.mybatis_2.Students">
+        <id property="sid" column="s_id"/>
+        <result property="sno" column="s_no"/>
+        <result property="sname" column="s_name"/>
+        <result property="sgender" column="s_gender"/>
+    </resultMap>
+
+    <select id="get6" resultMap="getClesses6">
+        SELECT c.*,s.s_id,s.s_no,s.s_name,s.s_gender FROM classes c INNER JOIN students s ON c.c_id = s.c_id
+    </select>
+    
+    
+
+
+</mapper>

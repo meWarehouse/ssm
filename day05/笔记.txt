@@ -1,0 +1,198 @@
+
+
+Spring JDBC 与 事务
+
+    Spring 对 JDBC 的支持
+        resources 中 配置 jdbc.properties
+            driverClassName=com.mysql.cj.jdbc.Driver
+            url=jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF8&userSSL=false&serverTimezone=GMT%2B8
+            uName=root
+            password=root
+
+        在 xml 文件中引用
+            <!--导入properties配置文件-->
+            <context:property-placeholder location="jdbc"/>
+            <!-- 加载配置文件数据 -->
+            <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+                <property name="driverClassName" value="${driverClassName}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${uName}"/>
+                <property name="password" value="${password}"/>
+                <property name="initialSize" value="3"/>
+            </bean>
+
+
+        装配 JdbcTemplate
+            private JdbcTemplate jdbcTemplate;
+            @Autowired
+            public void init(BasicDataSource dataSource){
+                jdbcTemplate = new JdbcTemplate(dataSource);
+                System.out.println("BasicDataSource:"+jdbcTemplate);
+            }
+
+        使用 JdbcTemplate 更新数据库 JdbcTemplate 类被设计成为线程安全的
+
+        JdbcTemplate主要提供以下五类方法：
+
+        execute方法：可以用于执行任何SQL语句，一般用于执行DDL语句；
+
+        update方法及batchUpdate方法：update方法用于执行新增、修改、删除等语句；batchUpdate方法用于执行批处理相关语句；
+
+        query方法及queryForXXX方法：用于执行查询相关语句；
+
+        call方法：用于执行存储过程、函数相关语句。
+
+
+    Spring 中的事务
+        spring中的声明式事务使用的是AOP
+
+        xml 文件中配置
+            <!--注册事务管理器  配置事务管理器的“id”的值 必须和支持注解的事务“transaction-manager”一致 且必须为transactionManager -->
+            <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref=" jdbc 加载配置文件的 bean 的 id"/>
+            </bean>
+
+        使用事务模板类配置事务
+             //事物模板类
+            private TransactionTemplate transactionTemplate;
+            @Autowired
+            public void init(PlatformTransactionManager txManger){
+                this.transactionTemplate = new TransactionTemplate(txManger);
+            }
+
+             transactionTemplate.execute(new TransactionCallbackWithoutResult() {
+
+                        //调用此方法前开启事物
+                        //如果方法异常回滚事物
+                        //没有异常就提交事务
+                        @Override
+                        protected void doInTransactionWithoutResult(TransactionStatus status) {
+                           需要添加事物的代码
+                        }
+             }
+
+        xml 文件配置事务
+            <!-- 配置一个事物通知 -->
+            <tx:advice id="txAdvice" transaction-manager="txManger">
+                <tx:attributes>
+                    <!-- 以 get 开头的方法都使用只读事物，只读事物可以提高查询效率 -->
+                    <tx:method name="get*" read-only="true"/>
+                    <tx:method name="*"/>
+                </tx:attributes>
+            </tx:advice>
+
+            <aop:config proxy-target-class="true">
+                <aop:pointcut id="aopPointcut" expression="execution(* com.kc.jdbc_1.UserService.*(..))"/>
+                <!-- 通知器：通知与切入点 -->
+                <aop:advisor advice-ref="txAdvice" pointcut-ref="aopPointcut"/>
+            </aop:config>
+
+
+        注解配置事务
+            <!-- 激活 @Transaction 注解 -->
+            <tx:annotation-driven transaction-manager="txManger" proxy-target-class="true"/>
+
+            @Transactional //在 需要 事务的方法上注解  @Transactional 就可开启事物
+            @Transactional(value = "transactionManager")里面value的值写不写都可以 默认transactionManager
+
+
+
+        注意：
+            配置事务管理器的“id”的值 必须和支持注解的事务“transaction-manager”一致 且必须为transactionManager
+            @Transactional(value = "transactionManager")里面value的值写不写都可以 默认transactionManager
+                <!-- 3.配置事务管理器 -->
+                <bean id="transactionManager"
+                    class="org.springframework.orm.jpa.JpaTransactionManager">
+                    <property name="entityManagerFactory"
+                        ref="entityManagerFactory"></property>
+                </bean>
+
+                <!-- 4.配置支持注解的事务 -->
+                <tx:annotation-driven
+                    transaction-manager="transactionManager" />
+
+            除此之外还有种可能是 transactionManager'找到匹配的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

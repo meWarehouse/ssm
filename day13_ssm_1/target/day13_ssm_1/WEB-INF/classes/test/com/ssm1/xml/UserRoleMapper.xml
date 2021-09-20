@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.UserRoleMapper">
+
+    <!--    uid  uname      ugender     rid  rname      -->
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.UserRole">
+        <id column="uid" property="uid"/>
+        <result column="rid" property="rid"/>
+        <result column="uname" property="uname"/>
+        <result column="ugender" property="ugender"/>
+        <result column="rname" property="rname"/>
+    </resultMap>
+
+<!--    public List<UserRole> selectAll(Map<String,Object> map);-->
+    <!--
+        SELECT u.`id` uid,u.`user_name` uname,u.`gender` ugender,r.`id` rid,r.`name` rname
+        FROM sm_user u LEFT JOIN sm_role r ON u.`r_id`=r.`id`
+     -->
+    <select id="selectAll" resultMap="BaseResult">
+        SELECT u.`id` uid,u.`user_name` uname,u.`gender` ugender,r.`id` rid,r.`name` rname
+        FROM sm_user u LEFT JOIN sm_role r ON u.`r_id`=r.`id` LIMIT #{start},#{limit};
+    </select>
+
+    <!--    public int getCount();-->
+    <select id="getCount" resultType="int">
+        SELECT COUNT(*) FROM sm_user u LEFT JOIN sm_role r ON u.`r_id`=r.`id`
+    </select>
+
+    <!-- UserRole getUserRole(Integer id); -->
+    <select id="getUserRole" resultMap="BaseResult">
+        SELECT u.`id` uid,u.`user_name` uname,u.`gender` ugender,r.`id` rid,r.`name` rname
+        FROM sm_user u LEFT JOIN sm_role r ON u.`r_id`=r.`id` WHERE u.`id`=#{param} ;
+    </select>
+
+</mapper>

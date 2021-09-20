@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+
+    <!-- 容器启动后会自动扫描 @Component @Controller @Service @Repository 注解  -->
+    <!--
+        如果扫描到 @Controller 就会创建一个 javabean 放入容器
+        同时将 @Controller 中所有带有 @RequestMapping 的注解和相应的url绑定在一起
+        当浏览器请求的 url 和 Controller 中的方法匹配时就会执行次方法
+     -->
+    <context:component-scan base-package="com.kc.mvc2"/>
+
+
+    <mvc:annotation-driven/>
+
+</beans>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 引入 jdbc 配置文件 -->
+    <properties resource="jdbc.properties"/>
+    <!--
+        配置环境信息
+            default="指定默认环境 环境的 id "
+    -->
+    <environments default="development">
+        <!--
+            environment节点
+                mybatis的每个environment对应一个数据库
+                如果需要切换environment，只需要修改配置文件
+        -->
+        <environment id="development">
+            <!--
+                事物管理器
+                TransactionManager用于配置事务相关信息
+                TransactionManager的type属性可以为JDBC、MANAGED(weblogic服务器时使用)
+            -->
+            <transactionManager type="JDBC"/>
+            <!--
+                数据源
+                    datasource用于配置数据库连接信息
+                    datasource的type属性可以为UNPOOLED，POOLED（使用连接池 大部分情况下使用），JNDI
+            -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driverClassName}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${userName}"/>
+                <property name="password" value="${passWord}"/>
+            </dataSource>
+        </environment>
+
+
+        <environment id="test">
+            <!-- 事物管理器 -->
+            <transactionManager type="JDBC"/>
+            <!-- 数据源 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driverClassName}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${userName}"/>
+                <property name="password" value="${passWord}"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+
+
+    <!--
+        映射器
+        mappers用于配置mapper.xml的路径
+        四种配置方式
+            <mapper resource="com/test/UserMapper.xml" />
+            <mapper class="com.test.UserMapper"/>  UserMapper.xml 与 UserMapper 是绑定在一起的
+            <mapper url="file:///D:/com/test/UserMapper.xml"/>
+            <package name="com.test"/> 扫描 com.test 包中的所有映射器
+
+            因为在 java 文件中 的 xml 文件不会编译 所以 出现异常 java.io.IOException: Could not find resource xxxMapper.xml
+            所以在 pom.xml 文件中加上以下代码
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/java</directory>
+                        <includes>
+                            <include>**/*.xml</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </bilid>
+    -->
+    <mappers>
+        <mapper resource="com/kc/mybatis_1/UserMapper.xml"/>
+<!--        <mapper class="com.kc.mybatis_1.UserMapper"/>-->
+<!--        <package name="com.kc.mybatis_1"/>-->
+    </mappers>
+
+
+</configuration>

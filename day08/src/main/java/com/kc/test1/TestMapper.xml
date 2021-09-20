@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.test1.TestMapper">
+
+    <resultMap type="com.kc.test1.Classes" id="get1Result">
+        <id property="cid" column="c_id" />
+        <result property="name" column="c_name"/>
+    </resultMap>
+
+    <select id="get1" resultMap="get1Result" parameterType="java.lang.String">
+		SELECT * FROM classes
+	</select>
+
+
+    <resultMap id="get2Result" type="com.kc.test1.Students">
+        <id property="id" column="s_id" />
+        <result property="no" column="s_no"/>
+        <result property="name" column="s_name"/>
+        <result property="gender" column="s_gender"/>
+        <result property="cid" column="c_id"/>
+
+    </resultMap>
+
+    <select id="get2" resultMap="get2Result">
+        SELECT * FROM students;
+    </select>
+
+
+
+<!--    <select id="get4" resultMap="get2Result" parameterType="com.kc.test1.Students">-->
+<!--        SELECT * FROM students WHERE 1=1-->
+<!--        <if test="no != ''">-->
+<!--           AND s_no LIKE '%${no}%'-->
+<!--        </if>-->
+<!--        <if test="name != ''">-->
+<!--            AND s_name LIKE '%${name}%'-->
+<!--        </if>-->
+<!--        <if test="gender != ''">-->
+<!--            AND s_gender LIKE '%${gender}%'-->
+<!--        </if>-->
+    <!--    </select>-->
+
+<!--    <select id="get4" resultMap="get2Result" parameterType="com.kc.test1.Students">-->
+<!--        SELECT * FROM students WHERE 1=1-->
+<!--        <if test="no != ''">-->
+<!--           AND s_no LIKE concat('%',#{no},'%')-->
+<!--        </if>-->
+<!--        <if test="name != ''">-->
+<!--            AND s_name LIKE concat('%','${name}','%')-->
+<!--        </if>-->
+<!--        <if test="gender != ''">-->
+<!--            AND s_gender LIKE concat('%','${gender}','%')-->
+<!--        </if>-->
+
+<!--    </select>-->
+
+<!--        <select id="get4" resultMap="get2Result" parameterType="com.kc.test1.Students">-->
+<!--            SELECT * FROM students-->
+<!--            <where>-->
+<!--                <if test="no != ''">-->
+<!--                    s_no LIKE concat('%','${no}','%')-->
+<!--                </if>-->
+<!--                <if test="name != ''">-->
+<!--                    AND s_name LIKE concat('%','${name}','%')-->
+<!--                </if>-->
+<!--                <if test="gender != ''">-->
+<!--                   AND s_gender LIKE concat('%','${gender}','%')-->
+<!--                </if>-->
+<!--            </where>-->
+<!--        </select>-->
+
+        <select id="get4" resultMap="get2Result" parameterType="com.kc.test1.Students">
+            SELECT * FROM students
+            <trim prefix="where" prefixOverrides="and | or">
+
+                <if test="no != null">
+                    s_no LIKE concat('%',#{no},'%')
+                </if>
+                <if test="name != null">
+                    AND s_name LIKE concat('%',#{name},'%')
+                </if>
+                <if test="gender != null">
+                    AND s_gender LIKE concat('%',#{gender},'%')
+                </if>
+            </trim>
+
+        </select>
+
+
+
+</mapper>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="c" class="com.day02.d2.Customers">
+        <property name="address" value="北京"/>
+        <property name="phone" value="12345678909"/>
+    </bean>
+    
+    <bean id="u" class="com.day02.d2.Users">
+        <property name="age" value="12"/>
+        <property name="name" value="xiaomi"/>
+        <property name="sex" value="0"/>
+
+<!--        <property name="set">-->
+<!--            <set>-->
+<!--                <value type="com.day02.d2.Manger"></value>-->
+<!--            </set>-->
+<!--        </property>-->
+
+        <property name="map">
+            <map>
+                <entry key="1" value-ref="c"/>
+                <entry key="2" value-ref="c"/>
+            </map>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>list1</value>
+                <value>list2</value>
+                <value>list3</value>
+            </list>
+        </property>
+
+
+    </bean>
+
+    <bean id="m" class="com.day02.d2.Manger">
+        <property name="users" ref="u"/>
+    </bean>
+
+    <!--<bean id="sf" class="com.day02.d2.StaticFactory" factory-method="createInstance"/>-->
+
+
+</beans>

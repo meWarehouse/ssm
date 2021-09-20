@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kc.mybatis_1.DeparmentMapper">
+
+    <!-- Department getDept(int id); -->
+    <select id="getDept" resultType="dept" parameterType="int">
+        SELECT * FROM tbl_dept WHERE id = ${id};
+    </select>
+
+    <resultMap id="getDeptAndEmp1" type="dept">
+        <!-- id  dept_name      id  last_name     age  gender  email           d_id   -->
+        <id property="id" column="id"/>
+        <result property="deptName" column="dept_name"/>
+
+        <!--<result property="employees.id" column="id"/>
+        <result property="employees.lastName" column="last_name"/>
+        <result property="employees.age" column="age"/>
+        <result  property="employees.gender" column="gender"/>
+        <result property="employees.email" column="email"/>-->
+
+        <association property="employees" select="getEmployees" column="id"/>
+
+    </resultMap>
+    <resultMap id="getEmployees1" type="emp">
+        <id property="id" column="id"/>
+        <result property="lastName" column="last_name"/>
+        <result property="age" column="age"/>
+        <result property="gender" column="gender"/>
+        <result property="email" column="email"/>
+    </resultMap>
+
+    <!--    Department getDeptAndEmp(int id);-->
+    <select id="getDeptAndEmp" resultMap="getDeptAndEmp1">
+        SELECT * FROM tbl_dept WHERE id =${id}
+    </select>
+    <select id="getEmployees" resultMap="getEmployees1">
+        select * from tbl_employee WHERE d_id = ${id}
+    </select>
+
+
+</mapper>

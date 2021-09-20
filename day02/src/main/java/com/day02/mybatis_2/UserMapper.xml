@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.day02.mybatis_2.UserMapper">
+
+    <select id="get2" resultType="com.day02.mybatis_2.UserDetails" parameterType="int">
+        select id,name,age,gender,aid from user_1 where id = #{id}
+    </select>
+
+
+<!--    <resultMap id="userMassage" type="com.day02.mybatis_2.User">-->
+<!--        <id property="id" column="id"/>-->
+<!--        <result property="name" column="name"/>-->
+<!--        <result property="age" column="age"/>-->
+<!--        <result property="gender" column="gender"/>-->
+<!--    </resultMap>-->
+    <select id="get1" resultType="com.day02.mybatis_2.User" parameterType="int">
+        SELECT id,name,age,gender FROM user_1 WHERE id=#{id}
+    </select>
+
+    <insert id="insert"  parameterType="com.day02.mybatis_2.User" useGeneratedKeys="true"  keyProperty="id">
+        INSERT INTO user_1(name,age,gender) VALUES(#{name},#{age},#{gender});
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM user_1 WHERE id = #{id}
+    </delete>
+
+
+    <update id="update" parameterType="com.day02.mybatis_2.User">
+        UPDATE user_1 SET name = #{name},age=#{age},gender=#{gender} WHERE id = #{id}
+    </update>
+
+
+    <select id="getCount" resultType="int">
+        SELECT count(id) FROM user_1
+    </select>
+
+    <select id="getForList" resultType="com.day02.mybatis_2.UserDetails">
+        SELECT u_id id,u_name `name`,u_age age,u_aid aid FROM user_1;
+    </select>
+
+    <select id="getMap" resultType="java.util.Map">
+        SELECT * FROM user_1 WHERE id = #{id}
+    </select>
+
+
+    <resultMap id="getUserMessage" type="com.day02.mybatis_2.User">
+        <id property="id" column="u_id"/>
+        <result property="name" column="u_name"/>
+        <result property="age" column="u_age"/>
+        <result property="gender" column="u_gender"/>
+    </resultMap>
+
+    <select id="getUser" resultMap="getUserMessage">
+        SELECT u_id,u_name,u_age,u_gender FROM user_1 WHERE u_name = #{name}
+    </select>
+
+
+
+
+</mapper>

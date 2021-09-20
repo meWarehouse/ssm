@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.RoleMenuMapper">
+
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.Menu">
+        <!--   m_id  m_name  m_url    m_pid   -->
+        <id column="m_id" property="id"/>
+        <result column="m_name" property="name"/>
+        <result column="m_url" property="url"/>
+        <result column="m_pid" property="pid"/>
+        <collection property="children" column="m_id" ofType="test.com.ssm1.bean.Menu" select="getChildren"/>
+    </resultMap>
+
+    <select id="getMenuTree" resultMap="BaseResult">
+        SELECT * FROM sm_menue m_pid = 0;
+    </select>
+    <select id="getChildren" resultMap="BaseResult">
+        SELECT * FROM sm_menue WHERE m_pid = #{param};
+    </select>
+
+    <!-- void deleteRoleId(Integer roleId); -->
+    <delete id="deleteRoleId">
+        DELETE FROM sm_rolemenu WHERE roleId = #{param};
+    </delete>
+
+    <!--  void insert(int parseInt, Integer roleId); -->
+    <insert id="insert">
+        INSERT INTO sm_rolemenu(roleId,menuId) VALUES(#{roleId},#{menuId});
+    </insert>
+
+    <!-- List<Menu> getFromUser(Integer roleId); -->
+    <!--SELECT m.*FROM sm_user u,sm_rolemenu r,sm_menue m WHERE u.r_id = r.roleId AND r.menuId =m.m_id AND u.r_id = 3-->
+    <select id="getFromUser" resultMap="BaseResult">
+        SELECT m.*
+        FROM sm_user u,sm_rolemenu r,sm_menue m
+        WHERE u.r_id = r.roleId AND r.menuId =m.m_id AND u.r_id = #{param}
+    </select>
+
+</mapper>

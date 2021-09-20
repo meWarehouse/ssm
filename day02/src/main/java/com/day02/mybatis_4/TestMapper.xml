@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.day02.mybatis_4.TestMapper">
+
+    <resultMap id="get1Result" type="com.day02.mybatis_4.Classes">
+        <id property="cid" column="c_id" />
+        <result property="name" column="c_name"/>
+    </resultMap>
+
+    <select id="get1" parameterType="int" resultMap="">
+        SELECT * FROM classes WHERE c_id = #{id}
+    </select>
+
+</mapper>

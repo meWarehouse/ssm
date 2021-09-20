@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.com.ssm1.dao.RoleMapper">
+
+    <resultMap id="BaseResult" type="test.com.ssm1.bean.Role">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <!-- List<Role> allRolez(); -->
+    <select id="allRolez" resultMap="BaseResult">
+        SELECT * FROM sm_role;
+    </select>
+
+
+    <!--    public int add(Role role);-->
+    <insert id="add">
+        INSERT INTO sm_role(name) VALUES(#{name});
+    </insert>
+
+
+    <!--    public int update(Role role);-->
+    <update id="update">
+        UPDATE sm_role SET name = #{name} WHERE id =#{id}
+    </update>
+
+    <!--    public int selectCount();-->
+    <select id="selectCount" resultType="int">
+        SELECT count(*) FROM sm_role;
+    </select>
+    <!--    public List<Role> selectAll(Map<String,Object> map);-->
+    <select id="selectAll" resultMap="BaseResult">
+        SELECT * FROM sm_role LIMIT #{start},#{limit};
+    </select>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kc.spring1.TestMapper">
+
+    <resultMap id="getStuMessge" type="com.kc.spring1.Students">
+        <id property="id" column="s_id"/>
+        <result property="no" column="s_no"/>
+        <result property="name" column="s_name"/>
+        <result property="gender" column="s_gender"/>
+        <result property="cid" column="c_id"/>
+
+    </resultMap>
+
+    <select id="get1" resultMap="getStuMessge">
+        SELECT * FROM students
+    </select>
+
+</mapper>

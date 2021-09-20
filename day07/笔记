@@ -1,0 +1,155 @@
+
+
+动态SQL
+
+    动态SQL之if
+        <select id="searchList" resultMap="getStuMessge" parameterType="com.kc.mybatis_3.Students">
+            SELECT * FROM students WHERE 1=1
+             <if test="sname != ''">
+                and s_name=#{sname}
+            </if>
+            <if test="sgender !=''">
+                and s_gender=#{sgender}
+            </if>
+            <if test="sno != ''">
+                and s_no=#{sno}
+            </if>
+        </select>
+
+     动态SQL之choose、when、otherwise
+        <!-- List<Students> get2(String searchContent,String searchType)  param1 是第一个参数  param2第二个参数 -->
+        <select id="get2" resultMap="getStuMessge" >
+            SELECT * FROM students WHERE 1=1
+            <choose>
+                <when test="param2 == 'name'">
+                    and s_name=#{param1}
+                </when>
+                <when test="param2 == 'no'">
+                    and s_no=#{param1}
+                </when>
+            </choose>
+        <!--        <if test="param2 == 'name'">-->
+        <!--            and s_name=#{param1}-->
+        <!--        </if>-->
+        <!--        <if test="param2 == 'no'">-->
+        <!--            and s_no=#{param1}-->
+        <!--        </if>-->
+        </select>
+
+     动态SQL之where、trim
+        <!-- where元素只有在有子句时才插入where，并且会删除额外的and和or -->
+        <select id="searchList1" resultMap="getStuMessge" parameterType="com.kc.mybatis_3.Students">
+            SELECT * FROM students
+            <where>
+                <if test="sname != ''">
+                    s_name=#{sname}
+                </if>
+                <if test="sgender !=''">
+                    and s_gender=#{sgender}
+                </if>
+                <if test="sno != ''">
+                    and s_no=#{sno}
+                </if>
+            </where>
+        </select>
+        <!-- trim：如果有子句时，会加入preﬁx中指定的单词，如果preﬁxOverrides中指定的单词有多余，就删除 -->
+        <select id="searchList2" resultMap="getStuMessge" parameterType="com.kc.mybatis_3.Students">
+            SELECT * FROM students
+            <trim prefix="where" prefixOverrides="and | or">
+                <if test="sname != ''">
+                    s_name=#{sname}
+                </if>
+                <if test="sgender !=''">
+                    and s_gender=#{sgender}
+                </if>
+                <if test="sno != ''">
+                    and s_no=#{sno}
+                </if>
+            </trim>
+        </select>
+
+        动态SQL之set、trim
+            <!-- set元素只有在有子句时会插入set，并且会删除额外的逗号 -->
+            <update id="update" parameterType="com.kc.mybatis_3.Students">
+                UPDATE students
+                <trim prefix="set" suffixOverrides=",">
+                    <if test="sno != ''">
+                        s_no=#{sno},
+                    </if>
+                    <if test="sname != ''">
+                        s_name = #{sname},
+                    </if>
+                    <if test="sgender != ''">
+                        s_gender=#{sgender}
+                    </if>
+                </trim>
+                WHERE s_id = #{sid}
+
+            <!--        <set>-->
+            <!--            <if test="sno != ''">-->
+            <!--                s_no=#{sno},-->
+            <!--            </if>-->
+            <!--            <if test="sname != ''">-->
+            <!--                s_name = #{sname},-->
+            <!--            </if>-->
+            <!--            <if test="sgender != ''">-->
+            <!--                s_gender=#{sgender}-->
+            <!--            </if>-->
+            <!--        </set>-->
+            <!--        WHERE s_id = #{sid}-->
+
+            </update>
+
+        动态SQL之foreach
+            <!--
+                 collection是取参数，item代表每次迭代时的当前值，
+                 open是迭代前加到sql中的单词，close是迭代结束后加到sql中的单词
+                 separator是多个值之间的分隔符
+            -->
+            <delete id="delete">
+                DELETE FROM students WHERE s_id IN
+                <foreach collection="list" item="sid" open="(" close=")" separator=",">
+                    #{sid}
+                </foreach>
+            </delete>
+             <!-- public List<Employee> getByForeach(@Param("ids")List<Integer> ids); -->
+            <select id="getByForeach" resultType="com.kc.mybatis_2.bean.Employee">
+                SELECT * FROM tbl_employee WHERE id IN
+                <foreach collection="ids" item="item_id" separator="," open="(" close=")">
+                    #{item_id}
+                </foreach>
+            </select>
+
+
+        批量操作
+            方法一：
+             <!-- public void addEmps(@Param("emps") List<Employee> emps); -->
+               <insert id="addEmps">
+                    INSERT INTO tbl_employee(last_name,age,gender,email,d_id)
+                    VALUES
+                    <foreach collection="emps" item="emp" separator=",">
+                        (#{emp.lastName},#{emp.age},#{emp.gender},#{emp.email},#{emp.department.id})
+                    </foreach>
+                </insert>
+            方法二：
+                <!-- 这种方式需要 allowMultiQueries=true 这种分号分隔多个 sql 也可以用于 删改的批量操作 -->
+              <insert id="addEmps">
+                    <foreach collection="emps" item="emp" separator=";">
+                        INSERT INTO tbl_employee(last_name,age,gender,email,d_id)
+                        VALUES (#{emp.lastName},#{emp.age},#{emp.gender},#{emp.email},#{emp.department.id})
+                    </foreach>
+                </insert>
+
+                <!--
+                    Oracle  oracle 不支持 values(),()..
+                -->
+
+
+        模糊查询
+            使用 s_no LIKE '%${no}%' 会引发 SQL 注入的问题
+            改进：使用 sql 的函数 concat()
+                ①： s_no LIKE concat('%',#{no},'%')
+                ②： s_gender LIKE concat('%','${gender}','%')  SQL 注入
+
+
+

@@ -1,0 +1,6 @@
+
+Spring MVC
+    springMVC介绍
+        MVC是一种设计模式。 MVC是Model（模型） View（视图） Controller（控制器）。
+        在一个典型的web应用中，视图层使用jsp技术，用于展示数据以及和用户进行交互。
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 配置一个 bean -->
+    <bean id="hw" class="spring_1.helloworld.HelloWorld">
+        <!-- 为属性赋值-->
+        <property name="user" value="Tom"></property>
+    </bean>
+
+    <bean id="hw2" class="spring_1.helloworld.HelloWorld">
+        <!-- 通过属性注入：通过 setter 方法注入属性值-->
+        <property name="user" value="Jerry"/>
+    </bean>
+
+    <!-- 通过构造器注入属性 -->
+    <bean id="hw3" class="spring_1.helloworld.HelloWorld">
+        <!-- 要求该 bean 必须有构造器 -->
+        <constructor-arg value="Mick"/>
+    </bean>
+
+    <!-- 若一个 bean 有多个构造器, 如何通过构造器来为 bean 的属性赋值 -->
+    <!-- 可以根据 index 和 value 进行更加精确的定位. (了解) -->
+    <bean id="car" class="spring_1.helloworld.Car">
+        <constructor-arg value="KUGA" index="0"/>
+        <constructor-arg value="ChangeAnFord" index="1"/>
+        <constructor-arg value="2500000" type="float"/>
+    </bean>
+
+    <bean id="car2" class="spring_1.helloworld.Car">
+        <constructor-arg value="ChangAnMazda"/>
+        <!-- 若字面值中包含特殊字符, 则可以使用 DCDATA 来进行赋值. (了解) -->
+        <!--<constructor-arg value="<ATARZA>"/>-->
+        <constructor-arg>
+            <value><![CDATA[<ATARZA>]]></value>
+        </constructor-arg>
+
+        <constructor-arg value="100" type="int" />
+    </bean>
+
+    <bean id="dao5" class="spring_1.ref.Dao"></bean>
+
+    <bean id="servece" class="spring_1.ref.Service">
+        <property name="dao">
+            <!-- 内部 bean, 类似于匿名内部类对象. 不能被外部的 bean 来引用, 也没有必要设置 id 属性 -->
+            <bean class="spring_1.ref.Dao">
+                <property name="dataSource" value="c3p0"/>
+            </bean>
+        </property>
+    </bean>
+
+
+
+</beans>

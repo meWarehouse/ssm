@@ -1,0 +1,393 @@
+
+mybatis
+
+    配置 mybatis
+        1.jdbc.properties 文件
+            driverClassName=com.mysql.cj.jdbc.Driver
+            url=jdbc:mysql://localhost/test? useUnicode=true&characterEncoding=UTF8&userSSL=true&serverTimezone=GMT%2B8
+            userName=root
+            passWord=root
+
+        2.mybatis-config.xml 文件配置
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <!DOCTYPE configuration
+                  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+                  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+            <configuration>
+                 <!-- 引入 jdbc 配置文件 -->
+                <properties resource="jdbc.properties"/>
+                    <!--
+                        配置环境信息
+                            default="指定默认环境 环境的 id "
+                    -->
+                  <environments default="指定默认环境 环境的 id">
+                     <!--
+                        environment节点
+                            mybatis的每个environment对应一个数据库
+                            如果需要切换environment，只需要修改配置文件
+                      -->
+                    <environment id="配置环境id">
+                         一个 environments 中 可以有多个 environment 每一个管理一个 数据源
+                    </environment>
+
+                    <environment id="配置环境id">
+                        <!--
+                            事物管理器
+                                TransactionManager用于配置事务相关信息
+                                TransactionManager的type属性可以为JDBC、MANAGED(weblogic服务器时使用)
+                        -->
+                      <transactionManager type="JDBC"/>
+                         <!--
+                            数据源
+                                datasource用于配置数据库连接信息
+                                datasource的type属性可以为UNPOOLED，POOLED（使用连接池 大部分情况下使用），JNDI
+                         -->
+                      <dataSource type="POOLED">
+                        <property name="driver" value="${driver}"/>
+                        <property name="url" value="${url}"/>
+                        <property name="username" value="${username}"/>
+                        <property name="password" value="${password}"/>
+                      </dataSource>
+                    </environment>
+
+                  </environments>
+
+                  <!--
+                    映射器 mappers用于配置mapper.xml的路径
+                    四种配置方式
+                        <mapper resource="com/test/UserMapper.xml" />  配置到指定的 xxxMapper.xml 文件
+                        <mapper class="com.test.UserMapper"/>  配置到与 xxxMapper.xml 文件 绑定的 Java 类
+                        <mapper url="file:///D:/com/test/UserMapper.xml"/> 使用绝对路径
+                        <package name="com.test"/> 扫描 com.test 包中的所有映射器
+                  -->
+                  <mappers>
+                    <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+                  </mappers>
+            </configuration>
+
+        3.xxxMapper.xml
+          <?xml version="1.0" encoding="UTF-8" ?>
+          <!DOCTYPE mapper
+            PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+            "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+          <!-- namespace="命名空间 要与对应的java文件的全类名相同" -->
+          <mapper namespace="org.mybatis.example.BlogMapper">
+            <!--
+                id="方法名" resultType="返回值类型 "  #{参数}
+                parameterType="参数类型"
+                useGeneratedKeys="true 返回主键 默认为false" keyProperty="id 主键名"
+            -->
+            <!-- 方法要执行的 SQL 语句   #{id}：代表方法参数 -->
+            <select id="方法名" resultType="返回值类">
+                方法要执行的 SQL 语句
+                select * from Blog where id = #{参数}
+            </select>
+
+          </mapper>
+
+        4.加载服务 对应的生命周期
+
+            //代表 classpath 下的配置文件
+            String config = "mybatis-config.xml";
+            //代表 classpath 下配置文件的输入流
+            InputStream is = Resources.getResourceAsStream(config);
+
+            /*
+              构建一个 SqlSessionFactory 的构建器
+              一旦创建了 SqlSessionFactory，就不再需要它了。 因此 SqlSessionFactoryBuilder 实例的最佳作用域是方法作用域 （也就是局部方法变量）
+            */
+            SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
+            /*
+              构建一个 SqlSessionFactory 对象 一个数据库对应一个 SqlSessionFactory 对象
+              SqlSessionFactory 一旦被创建就应该在应用的运行期间一直存在， SqlSessionFactory 在应用运行期间不要重复创 建多次，而应该是单例的
+            */
+            SqlSessionFactory sqlSessionFactory = builder.build(is); //builder.build(is,"指定环境可以指定多个 没有指定就是 mybatits-config.xml 问见中的默认环境 <environments default="development"> ");
+            /*
+              打开一个 SqlSession
+                  SqlSession 的实例不是线程安全的，因此是不能被共享的，每个线程都应该有它自己的 SqlSession 实例。
+                  SqlSession的作用域应该是请求或方法作用域。
+                  每次收到 HTTP 请求，就可以打开一个 SqlSession，返回一个响应 后就关闭它
+            */
+             //!!!! sqlSessionFactory.openSession() 默认是不提交事务的 调用 SqlSession 的 commit()   session.commit(); 方法提交事务 sqlSessionFactory.openSession(true) 自动提交事务
+            SqlSession session = session = sqlSessionFactory.openSession(true);
+            /*
+                userMapper 是实现了  UserMapper 的一个接口的实列
+            映射器是一些绑定映射语句的接口。映射器接口的实例是从 SqlSession 中获得的。
+            映射器实例的作用域应该是方法 作用域。 也就是说，映射器实例应该在调用它们的方法中被获取，使用完毕之后即可丢弃。 映射器实例并不需要被 显式地关闭
+            */
+            UserMapper userMapper = session.getMapper(UserMapper.class);
+            //userMapper：org.apache.ibatis.binding.MapperProxy@4f970963 通过代理创建
+
+            //关闭 session
+            session.close();
+
+
+        6.xxxMapper.xml 的 SQL 语句
+            insert 增
+                <insert id="insert"  parameterType="com.day02.mybatis_2.User" useGeneratedKeys="true"  keyProperty="id">
+                    INSERT INTO user_1(name,age,gender) VALUES(#{name},#{age},#{gender});
+                </insert>
+
+            delete 删
+                <delete id="delete" parameterType="int">
+                    DELETE FROM user_1 WHERE id = #{id}
+                </delete>
+
+            update 改
+                <update id="update" parameterType="com.day02.mybatis_2.User">
+                    UPDATE user_1 SET name = #{name},age=#{age},gender=#{gender} WHERE id = #{id}
+                </update>
+
+            select 查
+                <select id="get" resultType="com.day02.mybatis_2.User" parameterType="int">
+                    SELECT id,name,age,gender FROM user_1 WHERE id=#{id}
+                </select>
+
+                <select id="getCount" resultType="int">
+                   SELECT count(id) FROM user_1
+                </select>
+
+                <select id="getForList" resultType="com.day02.mybatis_2.UserDetails">
+                   SELECT * FROM user_1
+                </select>
+
+        7.映射
+            结果映射有三种形式：
+                将结果集映射到一个map中
+                如果结果集中的列名和一个java bean的属性名相同，可以将结果集映射到一个java bean中
+                如果结果集中的列名和java bean的属性名不同，还可以显式的配置一个ResultMap
+
+                1.将结果集映射到一个map中 通过 id 获取数据库的一行，将结果放入一个 map 中  Map<列名,列值> 无需对应的数据的 bean 对象直接获取数据库中的数据
+                     public Map<String,Object> getMap(int id);
+
+                     <select id="getMap" parameterType="int" resultType="java.util.Map">
+                             select * from t_user where id = #{id}
+                       </select>
+
+                2.如果结果集中的列名和一个java bean的属性名相同，可以将结果集映射到一个java bean中
+                    public User get(int id);
+
+                    ①：select * from t_user where id = #{id}
+                    如果结果集中的列名和一个 ***java bean的属性名相同***，可以将结果集映射到一个java bean中
+                    如果不同 （例如数据数据库中的属性列表为 u_id,u_naem java bean 中的属性为 id name ）可以通过取别名的方式解决
+                    ②：select u_id id,u_name name,u_age age,u_aa aa from t_user where u_id=#{id}
+
+                3.如果结果集中的列名和java bean的属性名不同，还可以显式的配置一个ResultMap
+                    List<User> getUser(String name);
+
+                    <resultMap id="getUserMessage" type="com.day02.mybatis_2.User">
+                        <id property="id" column="u_id"/>
+                        <result property="name" column="u_name"/>
+                        <result property="age" column="u_age"/>
+                        <result property="gender" column="u_gender"/>
+                    </resultMap>
+                    resultMap 与 u_id id,u_name `name`,u_age age,u_gender gender FROM user_1 WHERE u_name = #{name} 功能类似
+                    <select id="getUser" resultMap="getUserMessage">
+                        SELECT u_id,u_name,u_age,u_gender FROM user_1 WHERE u_name = #{name}
+                    </select>
+            映射关系
+                一对一映射
+                    <resultMap id="userDetails" type="com.day02.mybatis_3.User">
+                        <id property="id" column="u_id"/>
+                        <result property="name" column="u_name"/>
+                        <result property="age" column="u_age"/>
+                        <result property="gender" column="u_gender"/>
+                        <result property="aid" column="u_aid"/>
+                    </resultMap>
+
+                    <select id="getUser" resultMap="userDetails" parameterType="int" >
+                        SELECT * FROM user_1 u EHERE u.`u_aid` = ud.`a_aid`
+                    </select>
+
+                使用嵌套ResultMap的一对一映射
+
+                        <resultMap id="userDetails" type="com.day02.mybatis_3.User">
+                           <id property="id" column="u_id"/>
+                           <result property="name" column="u_name"/>
+                           <result property="age" column="u_age"/>
+                           <result property="gender" column="u_gender"/>
+                           <result property="aid" column="u_aid"/>
+
+                           <association property="details" resultMap="detailsMessage"/>
+
+                        </resultMap>
+
+                        <resultMap id="detailsMessage" type="com.day02.mybatis_3.Details">
+                           <id property="aid" column="a_aid"/>
+                           <result property="hobby" column="a_hobby"/>
+                           <result property="eat" column="a_eat"/>
+                           <result property="height" column="a_height"/>
+                           <result property="from" column="a_from"/>
+                        </resultMap>
+
+                        <select id="getUser" resultMap="userDetails" parameterType="int" >
+                           SELECT * FROM user_1 u INNER JOIN user_1_detalis ud ON u.`u_aid` = ud.`a_aid`
+                        </select>
+
+                使用嵌套select的一对一映射
+                    <resultMap id="userDetails" type="com.day02.mybatis_3.User">
+                        <id property="id" column="u_id"/>
+                        <result property="name" column="u_name"/>
+                        <result property="age" column="u_age"/>
+                        <result property="gender" column="u_gender"/>
+                        <result property="aid" column="u_aid"/>
+
+                        <association property="details" resultMap="getDetailsMessage"/>
+
+                    </resultMap>
+
+                    <resultMap id="getDetailsMessage" type="com.day02.mybatis_3.Details">
+                        <id property="aid" column="a_aid"/>
+                        <result property="hobby" column="a_hobby"/>
+                        <result property="eat" column="a_eat"/>
+                        <result property="height" column="a_height"/>
+                        <result property="from" column="a_from"/>
+                    </resultMap>
+
+                    <select id="getUser" resultMap="userDetails" parameterType="int">
+                        SELECT * FROM user_1
+                    </select>
+
+                    <select id="getDetails" resultMap="getDetailsMessage">
+                        SELECT * FROM user_1_detalis
+                    </select>
+
+                一对多映射
+                    班级和学生的关系是一对多，学生和班级的关系是多对一。
+                    外键在多的那张表上
+                    ①：嵌套 resultMap
+                        <resultMap id="get3Stus" type="com.kc.mybatis_2.Students">
+                            <id property="sid" column="s_id"/>
+                            <result property="sno" column="s_no"/>
+                            <result property="sname" column="s_name"/>
+                            <result property="sgender" column="s_gender"/>
+
+                        </resultMap>
+                        <resultMap id="get3Message" type="com.kc.mybatis_2.Classes">
+
+                            <id property="cid" column="c_id"/>
+                            <result property="cname" column="c_name"/>
+                            <association property="studertsList" resultMap="get3Stus"/>
+                        </resultMap>
+
+                        <select id="get3" resultMap="get3Message" parameterType="int">
+                            SELECT c.*,s.`c_id`,s.`s_no`,s.`s_name`,s.`s_gender` FROM classes c INNER JOIN students s ON c.`c_id` = s.`c_id` WHERE c.`c_id` = #{id}
+                        </select>
+
+                    ②：嵌套 select （可能出现 N+1 问题）
+                        <resultMap id="get4Message" type="com.kc.mybatis_2.Students">
+                            <id property="sid" column="s_id"/>
+                            <result property="sno" column="s_no"/>
+                            <result property="sname" column="s_name"/>
+                            <result property="sgender" column="s_gender"/>
+                        </resultMap>
+                        <resultMap id="getClasses4" type="com.kc.mybatis_2.Classes">
+                            <id property="cid" column="c_id"/>
+                            <result property="cname" column="c_name"/>
+
+                            <association property="studertsList" column="c_id" select="getStudent"/>
+
+                        </resultMap>
+                        <select id="get4" resultMap="getClasses4" parameterType="int">
+                            SELECT * FROM classes WHERE c_id = #{id}
+                        </select>
+
+                        <select id="getStudent" resultMap="get4Message" parameterType="int">
+                            SELECT * FROM students WHERE c_id = #{id}
+                        </select>
+
+
+            8.mybatis的N+1问题
+
+                <resultMap id="getClasses5" type="com.kc.mybatis_2.Classes">
+                    <id property="cid" column="c_id"/>
+                    <result property="cname" column="c_name"/>
+                    <!-- 嵌套 select （可能出现 N+1 问题） -->
+                    <association property="studertsList" column="c_id" select="getStudent5"/>
+
+                </resultMap>
+                <resultMap id="getMessage5" type="com.kc.mybatis_2.Students">
+                    <id property="sid" column="s_id"/>
+                    <result property="sno" column="s_no"/>
+                    <result property="sname" column="s_name"/>
+                    <result property="sgender" column="s_gender"/>
+                </resultMap>
+
+                <select id="get5" resultMap="getClasses5">
+                    SELECT * FROM classes;
+                </select>
+                <select id="getStudent5" resultMap="getMessage5" parameterType="int">
+                    SELECT * FROM students WHERE c_id = #{id}
+                </select>
+
+                <!--  **********  ****************  -->
+
+                <resultMap id="getClesses6" type="com.kc.mybatis_2.Classes">
+                    <id property="cid" column="c_id"/>
+                    <result property="cname" column="c_name"/>
+
+
+                    <!-- 嵌套 resultMap 不会产生 N+1 问题 -->
+                    <association property="studertsList" resultMap="getStudent6"/>
+
+                </resultMap>
+
+                <resultMap id="getStudent6" type="com.kc.mybatis_2.Students">
+                    <id property="sid" column="s_id"/>
+                    <result property="sno" column="s_no"/>
+                    <result property="sname" column="s_name"/>
+                    <result property="sgender" column="s_gender"/>
+                </resultMap>
+
+                <select id="get6" resultMap="getClesses6">
+                    SELECT c.*,s.s_id,s.s_no,s.s_name,s.s_gender FROM classes c INNER JOIN students s ON c.c_id = s.c_id
+                </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
